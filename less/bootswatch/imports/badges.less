@@ -1,0 +1,52 @@
+/*
+Badges
+
+Markup:
+<div class="badge {$modifiers}">Badge</div>
+<div class="badge badge-primary {$modifiers}">Badge</div>
+<div class="badge badge-success {$modifiers}">Badge</div>
+<div class="badge badge-warning {$modifiers}">Badge</div>
+<div class="badge badge-danger {$modifiers}">Badge</div>
+<div class="badge badge-info {$modifiers}">Badge</div>
+
+.badge-sm - Small badge.
+.badge-xs - Extra small badge.
+
+Styleguide 8
+*/
+.badge {
+  background-color: @gray;
+  border-radius: 20px;
+  font-weight: 100;
+  padding: 8px 25px;
+
+  &.badge-sm {
+    font-size: @font-size-small;
+    padding: 7px 20px;
+  }
+
+  &.badge-xs {
+    font-size: @font-size-extra-small;
+    padding: 4px 15px;
+  }
+
+  &.badge-primary {
+    background-color: @brand-primary;
+  }
+
+  &.badge-success {
+    background-color: @brand-success;
+  }
+
+  &.badge-warning {
+    background-color: @brand-warning;
+  }
+
+  &.badge-danger {
+    background-color: @brand-danger;
+  }
+
+  &.badge-info {
+    background-color: @brand-info;
+  }
+}

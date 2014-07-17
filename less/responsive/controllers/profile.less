@@ -1,0 +1,29 @@
+@media (max-width: @screen-xs-max) {
+  .profile-controller {
+    &.edit-action {
+      .profile-summary {
+        padding-bottom: 0;
+      }
+
+      .profile-actions {
+        .btn {
+          .make-xs-column(6);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .profile-controller {
+    &.edit-action {
+      .profile-summary {
+        .summary-info {
+          .summary-heading {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

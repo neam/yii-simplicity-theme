@@ -1,0 +1,28 @@
+.breadcrumbs {
+  .make-md-column(12);
+  font-size: @font-size-extra-small;
+  line-height: 1.8;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 25px;
+
+  li {
+    display: inline-block;
+
+    &:after {
+      margin: 0 5px;
+      content: '\003e';
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+        margin: 0;
+      }
+    }
+
+    a {
+      color: @text-color;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+/*
+Forms
+
+Styleguide 2
+*/
+
+/*
+Input fields
+
+Markup:
+<input type="text" class="form-control" value="input[type='text'].form-control">
+
+Styleguide 2.1
+*/
+.form-control {
+  .form-control;
+  border: 1px solid @input-field-border-color;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 100;
+  color: @gray-medium-3;
+}
+
+/*
+Textareas
+
+Markup:
+<textarea class="form-control" rows="3">textarea.form-control</textarea>
+
+Styleguide 2.2
+*/
+textarea.form-control {
+  padding: 12px;
+}
+
+/*
+Checkboxes
+
+TODO: Replace check icon and change label font styles.
+
+Markup:
+<input id="check1" type="checkbox" name="check" value="1">
+<label for="check1">Checkbox Label</label>
+
+Styleguide 2.3
+*/
+input[type="checkbox"].checkbox {
+  display: none;
+
+  & + label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 40px;
+    margin-right: 15px;
+    padding-left: 60px;
+    position: relative;
+    vertical-align: middle;
+
+    &:before {
+      background-color: #fff;
+      border: 2px solid @input-field-border-color;
+      border-radius: 3px;
+      bottombottom: 1px;
+      content: "";
+      display: inline-block;
+      left: 0;
+      margin-right: 10px;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:checked + label:before {
+    color: @text-color;
+    content: "\e013";
+    font-family: @glyphicons-halflings-font;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  }
+}
+
+/*
+Select fields
+
+Dropdown functionality is to be provided by JavaScript.
+
+Markup:
+<div class="select">
+  <span class="selected">Selected option</span>
+  <div class="select-button">
+    <!-- <span class="glyphicon glyphicon-chevron-down"></span> -->
+  </div>
+</div>
+
+Styleguide 2.4
+*/
+.select {
+  .form-control;
+  position: relative;
+
+  .selected {
+    line-height: 40px;
+    position: absolute;
+    top: 8px;
+  }
+
+  .select-button {
+    .btn;
+    .glyphicon-play;
+    background-color: @brand-primary;
+    display: inline-block;
+    padding: 15px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+
+    &:before {
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      font-family: @glyphicons-halflings-font;
+      font-size: 18px;
+      position: absolute;
+      top: 9px;
+      right: 10px;
+    }
+  }
+}
+
+.static-text-field-label {
+  display: block;
+  font-weight: bold;
+}
+
+.static-text-field {
+  display: block;
+  font-weight: 100;
+  line-height: @line-height-base;
+  padding: 12px;
+}
+
+// todo: add form-control error to styleguide?
+
+form span.help-block.error {
+  color: @red;
+  font-size: 12px;
+  margin: 0 0 15px;
+}

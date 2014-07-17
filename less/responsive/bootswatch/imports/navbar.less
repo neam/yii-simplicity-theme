@@ -1,0 +1,48 @@
+@media (max-width: @screen-xs-max) {
+  .navbar {
+    .navbar-brand {
+      border-right: none;
+      padding: 20.5px 15px;
+      width: 190px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .navbar-nav {
+      margin: 0 -15px;
+
+      & > li {
+        & > a {
+          border: none;
+          padding: 20px 15px;
+        }
+      }
+    }
+
+    .glyphicon {
+      display: none;
+    }
+  }
+
+  .navbar-default {
+    .navbar-toggle {
+      margin: 5px 10px;
+    }
+
+    .navbar-nav {
+      .open {
+        .dropdown-menu {
+          & > li {
+            & > a {
+              padding: 20px 15px;
+              padding-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

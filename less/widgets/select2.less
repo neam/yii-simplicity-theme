@@ -1,0 +1,48 @@
+.select2 {
+  height: @select2-field-height;
+
+  .select2-container {
+    height: @select2-field-height;
+
+    &.form-control {
+      border: none;
+      padding: 0;
+    }
+
+    .select2-choice {
+      height: @select2-field-height;
+      line-height: @select2-field-height;
+
+      .select2-arrow {
+        b {
+          background-position-y: 12px;
+        }
+      }
+    }
+  }
+}
+
+.select2-results {
+  .select2-result-label {
+    height: @select2-field-height;
+    overflow: hidden;
+    line-height: @select2-field-height;
+  }
+}
+
+// Thumbnail-related styles
+.select2-text {
+  line-height: 49px;
+}
+
+.select2-chosen {
+  .select2-text {
+    line-height: 53px;
+  }
+}
+
+.select2-results {
+  .select2-result-label {
+    line-height: 48px;
+  }
+}

@@ -1,0 +1,358 @@
+.item-controller {
+  .alerts {
+    .make-row();
+
+    .alerts-content {
+      .make-md-column(12);
+    }
+  }
+
+  .item-header {
+    .make-row();
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    .header-text {
+      .make-md-column(8);
+
+      .header-title {
+        .heading-large;
+        margin: 0;
+      }
+
+      .header-icon,
+      .header-version,
+      .header-status {
+        .hint-tooltip;
+        color: @gray;
+        font-size: 20px;
+      }
+    }
+
+    .header-actions {
+      .make-md-column(4);
+      text-align: right;
+    }
+  }
+
+  .item-content {
+    .make-row();
+  }
+
+  .item-progress {
+    .make-md-column(3);
+
+    .progress-item {
+      .make-row();
+
+      .item-bar {
+        .make-md-column(6);
+      }
+
+      .item-action {
+        .make-md-column(6);
+
+        .btn {
+          .btn-xs;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .item-form {
+    .make-md-column(9);
+
+    .form-title {
+      margin-top: 0;
+    }
+  }
+
+  .file-field-2cols {
+    .make-row();
+
+    .field-column {
+      &:first-child {
+        .make-md-column(9);
+      }
+
+      &:nth-child(2) {
+        .make-md-column(3);
+      }
+    }
+  }
+
+  .file-field-3cols {
+    .make-row();
+
+    .field-column {
+      &:first-child {
+        .make-md-column(6);
+      }
+
+      &:nth-child(2) {
+        .make-md-column(3);
+      }
+
+      &:nth-child(3) {
+        .make-md-column(3);
+      }
+    }
+  }
+
+  &.browse-action {
+    .browsebar {
+      .browsebar-actions {
+        .btn-toolbar;
+      }
+    }
+
+    .item-content {
+      .make-row();
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .item-thumb {
+      .make-md-column(3);
+
+      .no-thumb {
+        .alert;
+        .alert-info;
+      }
+    }
+
+    .item-actions {
+      .make-md-column(9);
+
+      .action-buttons {
+        .btn-toolbar;
+        margin: -5px 0 0 -5px;
+
+        .btn-group {
+          margin: 5px 0 0 5px;
+        }
+      }
+    }
+  }
+
+  &.edit-action,
+  &.translate-action,
+  &.prepareforpublishing-action,
+  &.prepareforreview-action
+  {
+    label {
+      font-weight: 400;
+    }
+
+    .item-top-actions {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .preview-button {
+        .btn-sm;
+        border-radius: 0; // TODO: Create a mixin for sharp corners.
+      }
+    }
+
+    .item-header {
+      .make-row();
+
+      .header-text {
+        .make-md-column(12);
+
+        .item-heading {
+          .heading-large;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .item-row {
+      .make-row();
+
+      .row-column {
+        .make-md-column(12);
+
+        .item-well {
+          .well;
+          font-weight: 100;
+          margin-bottom: 0;
+
+          .action-heading {
+            .heading-small;
+            margin: 0;
+            margin-bottom: 20px;
+          }
+
+          .item-content {
+            .make-row();
+
+            .content-header {
+              height: 75px;
+
+              .action-title-row {
+                .make-row();
+
+                .action-title {
+                  .make-xs-column(6);
+                }
+
+                .action-stop {
+                  .make-xs-column(6);
+                  text-align: right;
+                }
+              }
+            }
+
+            .content-primary {
+              .make-md-column(5);
+
+              .action-progress {
+                .make-row();
+
+                .progress-bar-container {
+                  .make-xs-column(6);
+                  .make-md-column(4);
+
+                  .progress {
+                    margin: 0;
+                    margin-top: 5px;
+                  }
+                }
+
+                .progress-percentage-container {
+                  .make-xs-column(6);
+                  .make-md-column(8);
+                  text-transform: uppercase;
+                }
+              }
+            }
+
+            .content-secondary {
+              .make-md-column(7);
+
+              .item-fields {
+                .form-control {
+                  margin-bottom: 20px;
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+
+              .step-actions {
+              }
+
+              .step-progress {
+                .progress-dots {
+                  display: inline-block;
+                  margin-right: 10px;
+                  vertical-align: top;
+
+                  .step-progress-dots {
+                    .progress-dots;
+
+                    li {
+                      .progress-dot;
+
+                      &.active {
+                        &:before {
+                          .progress-dot-filled;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .progress-text {
+                  display: inline-block;
+                  vertical-align: top;
+                }
+              }
+
+              .item-actions {
+                .step-action-buttons {
+                  margin-top: 20px;
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .workflow-actions {
+      margin-bottom: 20px;
+
+      .missing-text {
+        font-weight: 100;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &.translate-action {
+    .item-row {
+      &.step-subtitles {
+        .row-column {
+          .item-well {
+            .item-content {
+              .content-primary {
+                .make-md-column(5);
+              }
+
+              .content-secondary {
+                .make-md-column(7);
+
+                .item-fields {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.translate-action {
+    .translate-subtitles {
+      .column-subtitle {
+        width: 45%;
+      }
+
+      .column-translation {
+        width: 45%;
+      }
+    }
+  }
+
+  &.translationoverview-action {
+    .language-content {
+      .make-row();
+    }
+
+    .language-actions {
+      .make-md-column(4);
+    }
+
+    .language-progress {
+      .make-md-column(8);
+
+      .progress {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .list-view {
+    .list-items {
+      .list-item {
+        .well;
+      }
+    }
+  }
+}

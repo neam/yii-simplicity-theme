@@ -1,0 +1,83 @@
+.flowbar {
+  #gradient > .vertical(#fff, rgba(255,255,255,0), 90%);
+  max-width: 1140px;
+  position: relative;
+  width: 100%;
+
+  // todo: rename 'foot' to 'actions'
+  .flowbar-foot {
+    .make-row();
+    margin-top: 20px;
+
+    .foot-text {
+      .make-md-column(6);
+    }
+
+    .foot-actions {
+      .make-md-column(6);
+      text-align: right;
+    }
+  }
+
+  .foot-workflow {
+    .well;
+    .well-sm;
+
+    .workflow-content {
+      .make-row();
+    }
+
+    .workflow-text {
+      .make-md-column(6);
+
+      .workflow-title {
+        margin: 4px 0 0;
+      }
+    }
+
+    .workflow-actions {
+      .make-md-column(6);
+      text-align: right;
+    }
+  }
+
+  .required-workflow {
+    .well;
+    .well-sm;
+
+    .workflow-content {
+      .make-row();
+    }
+
+    .workflow-text {
+      .make-md-column(4);
+
+      .workflow-title {
+        margin: 4px 0 0;
+      }
+    }
+
+    .workflow-missing {
+      .make-md-column(4);
+      color: @red;
+      font-size: 18px;
+      text-align: center;
+
+      .missing-text {
+        display: inline-block;
+        margin-top: 4px;
+      }
+    }
+
+    .workflow-actions {
+      .make-md-column(4);
+      text-align: right;
+    }
+  }
+
+  .required-counts {
+    .required-text {
+      color: @red;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+/* Typography
+
+Styleguide 7
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: @base-font-weight;
+
+  small {
+    color: @gray;
+    font-weight: @base-font-weight;
+  }
+}
+
+.font-color-primary {
+  color: @brand-primary !important;
+}
+
+.font-color-secondary {
+  color: @brand-secondary !important;
+}
+
+/*
+Large heading
+
+Base class for large headings.
+
+Markup:
+<h1 class="heading-large {$modifiers}">Large Heading</h1>
+
+.font-color-primary - Primary font color.
+.font-color-secondary - Secondary font color.
+
+Styleguide 7.1
+*/
+.heading-large {
+  font-size: @font-size-h1;
+  font-weight: 100;
+}
+
+/*
+Small heading
+
+Base class for small headings.
+
+.font-color-primary   - Primary font color.
+.font-color-secondary - Secondary font color.
+
+Markup:
+<h1 class="heading-small {$modifiers}">Small Heading<h1>
+
+Styleguide 7.2
+*/
+.heading-small {
+  color: #000;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+/*
+Tiny heading
+
+Base class for tiny headings.
+
+.font-color-primary   - Primary font color.
+.font-color-secondary - Secondary font color.
+
+Markup:
+<h1 class="heading-tiny {$modifiers}">Tiny Heading</h1>
+
+Styleguide 7.3
+*/
+.heading-tiny {
+  color: #000;
+  font-size: @font-size-extra-small;
+  font-weight: 100;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+/*
+Page title
+
+Implements the .heading-large class.
+
+Markup:
+<h1 class="page-title {$modifiers}">Page Title</h1>
+
+Styleguide 7.4
+*/
+.page-title {
+  .heading-large;
+}
+
+/*
+Links
+
+Markup:
+<a href="#" class="link {$modifiers}">Link</a>
+<a href="#" class="link link-primary {$modifiers}">Link</a>
+<a href="#" class="link link-success {$modifiers}">Link</a>
+<a href="#" class="link link-warning {$modifiers}">Link</a>
+<a href="#" class="link link-danger {$modifiers}">Link</a>
+<a href="#" class="link link-info {$modifiers}">Link</a>
+<a href="#" class="link link-dark {$modifiers}">Link</a>
+
+.link-sm - Small links.
+.link-xs - Extra small links.
+
+Styleguide 7.5
+*/
+.link {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.link-dark {
+    color: @gray-medium-4;
+  }
+
+  &.link-primary {
+    color: @brand-primary;
+  }
+
+  &.link-success {
+    color: @brand-success;
+  }
+
+  &.link-warning {
+    color: @brand-warning;
+  }
+
+  &.link-danger {
+    color: @brand-danger;
+  }
+
+  &.link-info {
+    color: @brand-info;
+  }
+
+  &.link-sm {
+    font-size: @font-size-small;
+  }
+
+  &.link-xs {
+    font-size: @font-size-tiny;
+  }
+}
+
+.content {
+  font-weight: 200;
+}

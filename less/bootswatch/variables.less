@@ -1,0 +1,292 @@
+// Gapminder 1.0.0
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+@brand-primary:   @pink;
+@brand-secondary: @gray;
+@brand-success:   @green;
+@brand-warning:   @yellow;
+@brand-danger:    @red;
+@brand-info:      @purple;
+
+@yellow:          #feee74;
+@green:           #22d23e;
+@red:             #e0575c;
+@pink:            #eb4498;
+@pink-light:      #fef5fa;
+@purple:          #b7c1d8;
+@gray:            #c9c9c9;
+@gray-medium-1:   #939393;
+@gray-medium-2:   #707070;
+@gray-medium-3:   #565656;
+@gray-medium-4:   #444444;
+@gray-medium:     @gray-medium-1;
+@gray-dark:       #3d3d3d;
+@gray-darker:     #353535;
+@gray-light:      #f1f2f2;
+
+@gray-border:     #e4e4e4;
+
+//== Scaffolding
+//
+// ## Settings for some of the most global styles.
+
+@body-bg: #fff;
+
+@text-color: @gray-darker;
+
+@input-color-placeholder: #565656;
+
+@font-size-base: 16px;
+@font-size-small: 14px;
+@font-size-extra-small: 12px;
+@font-size-tiny: 11px;
+
+@font-size-h1: 44.5px;
+@font-size-h2: floor(@font-size-base * 2.15); // ~30px
+@font-size-h3: ceil(@font-size-base * 1.7); // ~24px
+@font-size-h4: ceil(@font-size-base * 1.25); // ~18px
+@font-size-h5: @font-size-base;
+@font-size-h6: ceil(@font-size-base * 0.85); // ~12px
+
+@headings-color: @gray-dark;
+
+@grid-border-color: @gray-border;
+@grid-border-size: 2px;
+
+@footer-height: 400px;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@open-sans-font-family: 'Open Sans', serif;
+@font-family-sans-serif: @open-sans-font-family;
+
+@base-font-weight: 100;
+
+//-- Iconography
+//
+//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+@icon-font-path:            "../../fonts/bootstrap/";
+@glyphicons-halflings-font: 'Glyphicons Halflings';
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+@btn-font-weight:                normal;
+
+@btn-default-color:              #fff;
+@btn-default-bg:                 @brand-secondary;
+@btn-default-border:             darken(@brand-secondary, 5%);
+
+@btn-warning-color:              @gray-dark;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-link-disabled-color:        @gray-light;
+
+//== Forms
+//
+//##
+
+@input-field-border-color:  @gray-border;
+@input-text-color:          @gray-medium-3;
+
+@input-height-base: 55px;
+
+@select2-field-height: 55px;
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+
+//== Navbar
+//
+//##
+
+@navbar-height:         63px;
+
+@navbar-default-color:             @text-color;
+@navbar-default-bg:                #fff;
+@navbar-default-border:            @grid-border-color;
+
+
+//== Navs
+//
+//##
+
+
+//== Pagination
+//
+//##
+
+
+//== Pager
+//
+//##
+
+
+//== Jumbotron
+//
+//##
+
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+@state-success-text:             #468847;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                #fff;
+@state-info-bg:                  @brand-info;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+
+@state-warning-text:             #c09853;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #b94a48;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+
+//== Tooltips
+//
+//##
+
+
+//== Popovers
+//
+//##
+
+
+//== Labels
+//
+//##
+
+
+//== Modals
+//
+//##
+
+
+//== Alerts
+//
+//## Define alert colors, border radius, and padding.
+
+
+//== Progress bars
+//
+//##
+
+@progress-bg:                 @gray;
+@progress-bar-color:          #fff;
+
+@progress-bar-bg:             @brand-primary;
+@progress-bar-success-bg:     @brand-success;
+@progress-bar-warning-bg:     @brand-warning;
+@progress-bar-danger-bg:      @brand-danger;
+@progress-bar-info-bg:        @brand-info;
+
+
+//== List group
+//
+//##
+
+
+//== Panels
+//
+//##
+
+@panel-footer-bg: @pink-light;
+
+//== Thumbnails
+//
+//##
+
+
+//== Wells
+//
+//##
+
+@well-bg: @gray-light;
+
+//== Badges
+//
+//##
+
+
+//== Breadcrumbs
+//
+//##
+
+
+//== Carousel
+//
+//##
+
+
+//== Close
+//
+//##
+
+
+//== Code
+//
+//##
+
+
+//== Type
+//
+//##
+
+
+//== Miscellaneous
+//
+//##
+
+@user-dashboard-profile-picture-size: 195px;
