@@ -1,7 +1,7 @@
 <?php /** @var string $content */ ?>
-<?php $this->beginContent(WebApplication::LAYOUT_MAIN); ?>
+<?php $this->beginContent(SimplicityUi::LAYOUT_MAIN); ?>
     <div class="layout-regular">
-        <?php $this->renderPartial('application.themes.gapminder.views.layouts._menu'); ?>
+        <?php $this->renderPartial('application.themes.simplicity.views.layouts._menu'); ?>
         <div class="container">
             <div class="content">
                 <div class="row">
@@ -21,10 +21,10 @@
                         <div class="row">
                             <div class="link-column">
                                 <ul class="footer-links">
-                                    <li><?php echo Yii::app()->renderFooterLink('Terms', 'terms'); ?></li>
-                                    <li><?php echo Yii::app()->renderFooterLink('About', 'about'); ?></li>
-                                    <li><?php echo Yii::app()->renderFooterLink('CC', 'cc'); ?></li>
-                                    <li><?php echo Yii::app()->renderFooterLink('Privacy Policy', 'privacyPolicy'); ?></li>
+                                    <li><?php echo Yii::app()->simplicityUi->renderFooterLink('Terms', 'terms'); ?></li>
+                                    <li><?php echo Yii::app()->simplicityUi->renderFooterLink('About', 'about'); ?></li>
+                                    <li><?php echo Yii::app()->simplicityUi->renderFooterLink('CC', 'cc'); ?></li>
+                                    <li><?php echo Yii::app()->simplicityUi->renderFooterLink('Privacy Policy', 'privacyPolicy'); ?></li>
                                 </ul>
                             </div>
                             <?php /*

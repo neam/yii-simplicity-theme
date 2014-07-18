@@ -1,7 +1,7 @@
 <?php
 /** @var string $content */
 ?>
-<?php $this->beginContent(WebApplication::LAYOUT_MAIN); ?>
+<?php $this->beginContent(SimplicityUi::LAYOUT_MAIN); ?>
     <div class="layout-minimal">
         <div class="container">
             <div class="content">
