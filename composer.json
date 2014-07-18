@@ -1,8 +1,8 @@
 {
-    "name": "neam/yii-workflow-ui",
+    "name": "neam/yii-simplicity-theme",
     "description": "todo",
     "keywords": ["yii"],
-    "homepage": "https://github.com/neam/yii-item",
+    "homepage": "https://github.com/neam/yii-simplicity-theme",
     "type": "yii-extension",
     "license": "MIT",
     "authors": [
@@ -12,18 +12,7 @@
         }
     ],
     "repositories": [
-        {
-            "type": "composer",
-            "url": "http://packages.phundament.com"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/neam/yii-qa-state"
-        }
     ],
-    "autoload": {
-        "classmap": ["traits/"]
-    },
     "require": {
         "php": ">=5.4.0",
         "phundament/p3media": "dev-awaiting-prs",
