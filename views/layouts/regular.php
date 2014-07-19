@@ -1,5 +1,5 @@
 <?php /** @var string $content */ ?>
-<?php $this->beginContent(SimplicityUi::LAYOUT_MAIN); ?>
+<?php $this->beginContent(WorkflowUi::LAYOUT_MAIN); ?>
     <div class="layout-regular">
         <?php $this->renderPartial('application.themes.simplicity.views.layouts._menu'); ?>
         <div class="container">
@@ -21,10 +21,10 @@
                         <div class="row">
                             <div class="link-column">
                                 <ul class="footer-links">
-                                    <li><?php echo Yii::app()->simplicityUi->renderFooterLink('Terms', 'terms'); ?></li>
-                                    <li><?php echo Yii::app()->simplicityUi->renderFooterLink('About', 'about'); ?></li>
-                                    <li><?php echo Yii::app()->simplicityUi->renderFooterLink('CC', 'cc'); ?></li>
-                                    <li><?php echo Yii::app()->simplicityUi->renderFooterLink('Privacy Policy', 'privacyPolicy'); ?></li>
+                                    <li><?php echo Yii::app()->workflowUi->renderFooterLink('Terms', 'terms'); ?></li>
+                                    <li><?php echo Yii::app()->workflowUi->renderFooterLink('About', 'about'); ?></li>
+                                    <li><?php echo Yii::app()->workflowUi->renderFooterLink('CC', 'cc'); ?></li>
+                                    <li><?php echo Yii::app()->workflowUi->renderFooterLink('Privacy Policy', 'privacyPolicy'); ?></li>
                                 </ul>
                             </div>
                             <?php /*

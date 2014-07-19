@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="<?php echo Yii::app()->language ?>"
       data-view="app"
-      data-config='<?php //echo app()->clientConfigJson(); ?>'>
+      data-config='<?php echo app()->workflowUi->clientConfigJson(); ?>'>
 <head>
     <meta charset="utf-8">
     <meta name="language" content="en"/>
@@ -12,23 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     <link rel="icon" href="<?php echo baseUrl('favicon.ico'); ?>" type="image/x-icon"/>
-    <?php
-    $css = Yii::app()->assetManager->publish(
-        Yii::app()->theme->basePath . '/assets',
-        true, // hash by name
-        -1, // level
-        $forceCopy = false
-    );
-    $clientScript = Yii::app()->getClientScript();
-    $clientScript->registerCssFile($css . '/main.css');
-    ?>
-    <?php
-        //$this->ga->registerTracking();
-        Yii::app()->yiistrap->registerAllScripts();
-        //Html::jsDirtyForms(); // TODO: Load this only when needed.
-    ?>
-    <?php //app()->registerCSS(); ?>
-    <?php //app()->registerScripts(); ?>
+    <?php app()->workflowUi->registerCss(); ?>
+    <?php app()->workflowUi->registerScripts(); ?>
     <?php app()->yiistrap->fixPanningAndZooming(); ?>
     <?php app()->clientScript->registerCoreScript('jquery', CClientScript::POS_END); ?>
     <?php /* TODO: Move this into the js-app feature branch and remove from develop ?>
