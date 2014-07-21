@@ -16,7 +16,7 @@
     "require": {
         "php": ">=5.4.0",
         "neam/yii-workflow-ui": "dev-develop",
-        "twitter/bootstrap": "3.0.*",
+        "twbs/bootstrap": "3.0.*",
         "yiisoft/yii": ">=1.1.0"
     }
 }
