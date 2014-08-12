@@ -34,6 +34,10 @@ trait SimplicityControllerTrait
         return $this->_breadcrumbs;
     }
 
+    public function setBreadcrumbs($v)
+    {
+        $this->_breadcrumbs = $v;
+    }
 
     /**
      * Builds and sets the breadcrumbs.
