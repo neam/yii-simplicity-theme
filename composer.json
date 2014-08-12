@@ -13,6 +13,9 @@
     ],
     "repositories": [
     ],
+    "autoload": {
+        "classmap": ["traits/"]
+    },
     "require": {
         "php": ">=5.4.0",
         "neam/yii-workflow-ui": "dev-develop",
