@@ -80,7 +80,7 @@ if ($page !== null) {
                             */
                             array(
                                 'label' => Yii::t('app', 'Manage Accounts'),
-                                'url' => array('/admin/manageAccounts'),
+                                'url' => array('/restrictedAccess/admin/manageAccounts'),
                                 'visible' => Yii::app()->user->isAdmin(),
                             ),
                             '---',
