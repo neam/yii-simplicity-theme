@@ -18,7 +18,7 @@
     },
     "require": {
         "php": ">=5.4.0",
-        "neam/yii-workflow-ui": "dev-develop",
+        "neam/yii-workflow-ui": "dev-adoveo-client",
         "twbs/bootstrap": "3.0.*",
         "yiisoft/yii": ">=1.1.0"
     }
