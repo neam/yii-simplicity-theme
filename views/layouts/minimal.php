@@ -12,4 +12,4 @@
             </div>
         </div>
     </div>
-<?php $this->endContent()w; ?>
+<?php $this->endContent(); ?>
