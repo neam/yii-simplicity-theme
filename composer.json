@@ -4,7 +4,7 @@
     "keywords": ["yii"],
     "homepage": "https://github.com/neam/yii-simplicity-theme",
     "type": "yii-extension",
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Fredrik Wollsén",
@@ -13,6 +13,9 @@
     ],
     "repositories": [
     ],
+    "autoload": {
+        "classmap": ["traits/"]
+    },
     "require": {
         "php": ">=5.4.0",
         "neam/yii-workflow-ui": "dev-develop",
