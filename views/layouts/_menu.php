@@ -13,7 +13,6 @@ if ($page !== null) {
 <?php $this->widget(
     '\TbNavbar',
     array(
-        'brandLabel' => Html::renderLogo(),
         'collapse' => true,
         'display' => TbHtml::NAVBAR_DISPLAY_FIXEDTOP,
         'items' => array(
@@ -30,8 +29,20 @@ if ($page !== null) {
                     array(
                         'label' => Yii::t('app', 'Dashboard'),
                         'icon' => TbHtml::ICON_TH,
-                        'url' => array('/dashboard/index'),
+                        'url' => array('/'),
                         'visible' => !Yii::app()->user->isGuest,
+                    ),
+                    array(
+                        'label' => 'Create Campaign',
+                        'visible' => !Yii::app()->user->isGuest,
+                        'id' => 'accountMenuLink',
+                        'items' => array(
+                            array(
+                                'label' => Yii::t('app', 'Player 1'),
+                                'url' => array('/p1campaign/add'),
+                                'visible' => !Yii::app()->user->isGuest
+                            ),
+                        ),
                     ),
                 ),
             ),
@@ -41,12 +52,12 @@ if ($page !== null) {
                     'class' => 'navbar-right',
                 ),
                 'items' => array(
-                    array(
+                   /* array(
                         'class' => 'language-menu',
                         'label' => Yii::app()->language,
                         'htmlOptions' => array('class' => 'language-menu'),
                         'items' => Controller::getLanguageMenuItems(),
-                    ),
+                    ),*/
                     array(
                         'label' => Yii::app()->user->name,
                         'visible' => !Yii::app()->user->isGuest,
@@ -86,7 +97,7 @@ if ($page !== null) {
                             '---',
                             array(
                                 'label' => Yii::t('app', 'Logout'),
-                                'url' => array('/account/authenticate/logout'),
+                                'url' => array('/user/logout'),
                                 'visible' => !Yii::app()->user->isGuest,
                                 'id' => 'logoutLink',
                             ),
