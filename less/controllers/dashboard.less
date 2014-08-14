@@ -1,0 +1,321 @@
+.dashboard-controller {
+  &.index-action {
+    .news-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          color: currentcolor;
+          font-weight: 400;
+        }
+
+        .news-item {
+          display: flex;
+          flex-direction: row;
+
+          .item-title {
+          }
+
+          .item-date {
+            flex-grow: 0;
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &.tasks-action {
+    .dashboard-profile {
+      padding-bottom: 35px;
+      border-bottom: @grid-border-size solid @grid-border-color;
+
+      .profile-info {
+        .make-sm-column(8);
+
+        .profile-picture {
+          .make-sm-column(5);
+          .make-md-column(4);
+          .make-lg-column(3);
+        }
+
+        .profile-facts {
+          .make-sm-column(7);
+          .make-md-column(8);
+          .make-lg-column(7);
+
+          .profile-top-bar {
+            .make-row();
+            margin-bottom: 40px;
+
+            .profile-points {
+              .make-xs-column(6);
+              color: @green;
+              font-size: 20px;
+              font-weight: 100;
+
+              .glyphicon {
+                font-size: 17px;
+              }
+            }
+
+            .profile-actions {
+              .make-xs-column(6);
+              text-align: right;
+
+              .glyphicon {
+                font-size: 20px;
+                color: @gray-medium-1;
+              }
+            }
+          }
+
+          .profile-name {
+            .heading-large;
+            margin: 0;
+            margin-bottom: 10px;
+          }
+
+          .profile-title {
+            font-weight: 100;
+          }
+        }
+      }
+
+      .recent-updates {
+        .make-sm-column(4);
+        .pull-right;
+        min-height: @user-dashboard-profile-picture-size;
+        border-left: @grid-border-size solid @grid-border-color;
+
+        .updates-top-bar {
+          .make-row();
+          font-size: @font-size-extra-small;
+          margin-bottom: 30px;
+
+          .updates-title {
+            .make-sm-column(6);
+
+            .updates-heading {
+              .heading-tiny;
+              margin: 0;
+            }
+          }
+
+          .updates-view-all {
+            .make-sm-column(6);
+            text-align: right;
+
+            .view-all-link {
+              .btn-xs;
+              .btn-link-dark;
+            }
+          }
+        }
+
+        .updates {
+          .make-row();
+
+          .updates-content {
+            .make-sm-column(12);
+
+            .updates-list {
+              margin: 0;
+              padding: 0;
+
+              li {
+                .make-row();
+                list-style: none;
+                margin-bottom: 45px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .update-image {
+                  .make-xs-column(3);
+                }
+
+                .update-info {
+                  .make-xs-column(9);
+                  font-size: @font-size-extra-small;
+                  font-weight: 100;
+
+                  .update-title {
+                    display: block;
+                    font-weight: bold;
+                  }
+
+                  .update-description {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dashboard-tasks-container {
+      border-bottom: @grid-border-size solid @grid-border-color;
+      margin-top: 40px;
+      padding-bottom: 40px;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .tasks-top-bar {
+        .make-row();
+        margin-bottom: 30px;
+
+        .top-bar-title {
+          .make-sm-column(6);
+
+          .tasks-heading {
+            .heading-large;
+            margin: 0;
+          }
+        }
+
+        .top-bar-actions {
+          .make-sm-column(6);
+        }
+      }
+
+      .tasks {
+        .make-sm-column(12);
+
+        .tasks-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          .tasks-list-item {
+            .well;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .task {
+              .make-row();
+              margin-bottom: 0px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .task-thumbnail {
+                .make-sm-column(4);
+                .make-md-column(3);
+
+                .thumbnail-container {
+                  margin-bottom: 10px;
+                }
+
+                .skip-link-container {
+                  .skip-this-link {
+                    .link;
+                    .link.link-dark;
+                    .link.link-xs;
+                  }
+                }
+              }
+
+              .task-info {
+                .make-sm-column(8);
+                .make-md-column(9);
+
+                .task-top-bar {
+                  .make-row();
+                  margin-bottom: 10px;
+
+                  .task-action-text {
+                    .make-sm-column(6);
+
+                    .action-heading {
+                      .heading-tiny;
+                    }
+                  }
+
+                  .task-facts {
+                    .make-sm-column(6);
+
+                    .facts-list {
+                      list-style: none;
+                      margin: 0;
+                      padding: 0;
+                      text-align: right;
+
+                      .facts-list-item {
+                        .badge;
+                        .badge.badge-xs;
+                        display: inline-block;
+                        margin-right: 6px;
+
+                        &:last-child {
+                          margin-right: 0;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .task-title {
+                  margin-bottom: 30px;
+
+                  .task-heading {
+                    .heading-small;
+                    margin: 0;
+                  }
+                }
+
+                .task-bottom-bar {
+                  .make-row();
+
+                  .task-progress {
+                    .make-md-column(6);
+
+                    .progress-info {
+                      margin-bottom: 3px;
+
+                      .progress-title {
+                        .heading-tiny;
+                      }
+
+                      .progress-percentage {
+                        .heading-tiny;
+                        font-weight: bold;
+                      }
+                    }
+
+                    .progress-bar-container {
+                      //width: 190px;
+                    }
+                  }
+
+                  .task-actions {
+                    .make-md-column(6);
+                    text-align: right;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dashboard-tasks-in-progress {
+      border-bottom: @grid-border-size solid @grid-border-color;
+      padding-bottom: 40px;
+    }
+  }
+}

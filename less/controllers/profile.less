@@ -1,0 +1,223 @@
+.profile-controller {
+  &.edit-action {
+    .profile-section {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid @grid-border-color;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .profile-section-heading {
+      .heading-small;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    .profile-row {
+      .make-row();
+
+      .profile-col-4 {
+        .make-md-column(4);
+
+        .profile-about-field {
+          height: 250px;
+        }
+      }
+
+      .profile-col-12 {
+        .make-md-column(12);
+      }
+
+      .radio {
+        padding-left: 0;
+      }
+    }
+
+    label {
+      font-weight: 400;
+    }
+
+    .profile-summary {
+      .make-row();
+      .profile-section;
+      border-bottom: none;
+      padding-bottom: 50px;
+
+      .summary-picture {
+        .make-sm-column(3);
+        .make-md-column(3);
+        .make-lg-column(2);
+      }
+
+      .summary-info {
+        .make-sm-column(5);
+        .make-md-column(5);
+        .make-lg-column(6);
+
+        .summary-heading {
+          .heading-large;
+          margin: 0;
+          margin-bottom: 15px;
+        }
+
+        .summary-lead {
+          font-weight: 100;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        .summary-badges {
+          color: @gray;
+          display: block;
+          font-size: 50px;
+        }
+      }
+
+      .summary-roles {
+        .make-sm-column(4);
+        .make-md-column(4);
+        .make-lg-column(4);
+      }
+    }
+
+    .personal-information {
+      .profile-section;
+      padding-bottom: 60px;
+    }
+
+    .profile-languages {
+      .profile-section;
+    }
+
+    .account-history {
+      .profile-section;
+    }
+
+    .profile-actions {
+      .profile-section;
+      text-align: right;
+    }
+
+    .flowbar {
+      .flowbar-head {
+        .make-row();
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .head-title {
+          .make-md-column(6);
+          .pull-left;
+
+          .profile-heading {
+            margin: 0;
+          }
+        }
+
+        .head-actions {
+          .make-md-column(6);
+          .pull-right;
+          text-align: right;
+        }
+      }
+
+      .flowbar-content {
+        .make-row();
+
+        .content-toolbar {
+          .make-md-column(8);
+          .pull-left;
+        }
+
+        .content-actions {
+          .make-md-column(4);
+          text-align: right;
+        }
+      }
+    }
+
+    .alerts {
+      .make-row();
+
+      .alerts-content {
+        .make-md-column(12);
+      }
+    }
+
+    .profile {
+      .make-row();
+
+      .profile-content {
+        .make-md-column(9);
+
+        .content-messages {
+          .alert;
+          .alert-success;
+        }
+
+        .content-form {
+          .radio {
+            padding-left: 0;
+          }
+
+          .profile-picture {
+            .make-row();
+
+            .picture-select {
+              .make-md-column(6);
+            }
+
+            .picture-upload {
+              .make-md-column(6);
+            }
+          }
+
+          .username-and-password {
+            .make-row();
+
+            .username {
+              .make-md-column(6);
+            }
+
+            .password {
+              .make-md-column(6);
+            }
+          }
+
+          .form-head {
+            .make-row();
+
+            .form-head-content {
+              .make-md-column(12);
+            }
+          }
+
+          .form-errors {
+            .make-row();
+          }
+
+          .form-fields {
+            .make-row();
+
+            .fields-heading {
+            }
+
+            .fields-left {
+              .make-md-column(6);
+            }
+
+            .fields-right {
+              .make-md-column(6);
+            }
+          }
+        }
+      }
+
+      .profile-sidebar {
+        .make-md-column(3);
+      }
+    }
+  }
+}
