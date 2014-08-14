@@ -2268,8 +2268,8 @@ input[type="button"].btn-block {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('bootstrap/glyphicons-halflings-regular.eot');
-  src: url('bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('bootstrap/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  src: url('../../fonts/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('../../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -3539,6 +3539,8 @@ fieldset[disabled] .btn-group-xs > .btn.btn-link-dark:focus {
   padding: 8px 25px;
   font-size: 14px;
   padding: 7px 20px;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
 }
 .btn-group-sm > .btn:focus {
   outline: thin dotted;
@@ -6805,6 +6807,72 @@ td.visible-print {
 .dropdown-menu > li > a {
   font-weight: 100;
 }
+@media (min-width: 768px) {
+  .navbar.navbar-secondary {
+    border: none;
+    margin-bottom: 0;
+    min-height: 1px;
+  }
+  .navbar.navbar-secondary .navbar-brand,
+  .navbar.navbar-secondary .nav > li > a {
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 7px;
+  }
+  .navbar.navbar-secondary .navbar-brand {
+    border: none;
+    font-weight: 500;
+    vertical-align: top;
+    padding-left: 22px;
+  }
+  .navbar.navbar-secondary .navbar-brand:before {
+    content: "\e072";
+  }
+  .navbar.navbar-secondary .navbar-brand:before {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    font-size: 7px;
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    left: 12px;
+  }
+  .navbar.navbar-secondary .navbar-nav {
+    color: #707070;
+  }
+  .navbar.navbar-secondary .navbar-nav > li.search-link {
+    margin-right: 20px;
+  }
+  .navbar.navbar-secondary .navbar-nav > li.search-link:before {
+    content: "\e003";
+  }
+  .navbar.navbar-secondary .navbar-nav > li.search-link:before {
+    font-family: 'Glyphicons Halflings';
+    font-size: 20px;
+    position: absolute;
+    top: 4px;
+  }
+  .navbar.navbar-secondary .navbar-nav > li.login-link {
+    padding-right: 30px;
+  }
+  .navbar.navbar-secondary .navbar-nav > li.login-link:before {
+    content: "\e072";
+  }
+  .navbar.navbar-secondary .navbar-nav > li.login-link:before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    font-family: 'Glyphicons Halflings';
+    font-size: 7px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  .navbar.navbar-secondary .container-fluid {
+    width: 100% !important;
+  }
+}
 /*
 Buttons
 
@@ -7193,6 +7261,8 @@ Styleguide 1.2
   padding: 8px 25px;
   font-size: 14px;
   padding: 7px 20px;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
 }
 .btn-sm:focus {
   outline: thin dotted;
@@ -8804,6 +8874,26 @@ fieldset[disabled] .action-buttons .action-button.btn-link-dark:focus {
 .action-buttons .action-button.badge-info {
   background-color: #b7c1d8;
 }
+/*
+Condensed button
+
+Chiefly used for maintaining a consistent height with other condensed form fields.
+
+Markup:
+<button class="btn btn-condensed">버튼</button>
+<button class="btn btn-condensed btn-primary">버튼</button>
+<button class="btn btn-condensed btn-success">버튼</button>
+<button class="btn btn-condensed btn-warning">버튼</button>
+<button class="btn btn-condensed btn-danger">버튼</button>
+<button class="btn btn-condensed btn-info">버튼</button>
+<button class="btn btn-condensed btn-info">버튼</button>
+
+Styleguide 1.7
+*/
+.btn-condensed {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 /* Typography
 
 Styleguide 7
@@ -8979,6 +9069,7 @@ Styleguide 2.1
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-appearance: none;
   border: 1px solid #e4e4e4;
   border-radius: 3px;
   font-size: 16px;
@@ -9102,6 +9193,7 @@ Styleguide 2.4
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-appearance: none;
   border: 1px solid #e4e4e4;
   border-radius: 3px;
   font-size: 16px;
@@ -9559,6 +9651,24 @@ form span.help-block.error {
   font-size: 12px;
   margin: 0 0 15px;
 }
+/*
+Small input fields.
+
+Markup:
+<input class="form-control-condensed form-control" type="text">
+
+Styleguide 2.5
+*/
+.form-control-condensed {
+  height: 38px;
+  padding: 6px 8px;
+}
+select.form-control-condensed {
+  border: none;
+  border-radius: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 .list-view .list-pager {
   text-align: right;
 }
@@ -9753,6 +9863,9 @@ Styleguide 5
 .styleguide-color.alert-error .alert-link {
   color: #953b39;
 }
+.layout-fluid .content {
+  margin-top: 29px;
+}
 .layout-minimal {
   margin-top: 60px;
 }
@@ -9769,7 +9882,12 @@ Styleguide 5
 }
 .layout-narrow {
   width: inherit;
-  margin: 40px 0;
+  margin: 10px 0;
+}
+@media only screen and (min-width: 768px) {
+  .layout-narrow {
+    margin: 40px 0;
+  }
 }
 .layout-narrow .body {
   text-align: center;
@@ -9852,6 +9970,322 @@ Styleguide 5
 }
 .layout-regular .footer .copyright-column p:last-child {
   margin-bottom: 0;
+}
+.gapminder-friends h2 {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.gapminder-friends h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.gapminder-friends .no-margin-bottom {
+  margin-bottom: 0;
+}
+.gapminder-friends p {
+  line-height: 1.7;
+}
+.gapminder-friends a {
+  font-weight: 600;
+  letter-spacing: -1px;
+  text-decoration: underline;
+}
+.gapminder-friends a:hover {
+  text-decoration: none;
+}
+.gapminder-friends a.btn {
+  text-decoration: none;
+}
+.gapminder-friends em {
+  font-style: italic;
+  font-weight: 400;
+  color: #eb4498;
+}
+.gapminder-friends .gapminder-friends-logo {
+  text-align: center;
+}
+.gapminder-friends .gapminder-friends-logo img {
+  width: 500px;
+  height: auto;
+}
+.gapminder-friends .btn {
+  border-radius: 5px;
+}
+.gapminder-friends .groups-column {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .gapminder-friends .groups-column {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+.gapminder-friends .groups-column h3 {
+  color: #939393;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.gapminder-friends .groups-column .group-member {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.gapminder-friends .groups-column .group-member:last-child {
+  margin-bottom: 0;
+}
+.gapminder-friends .groups-column .group-member .member-picture {
+  flex-shrink: 0;
+  display: block;
+  width: 70px;
+}
+.gapminder-friends .groups-column .group-member .member-info {
+  display: block;
+  margin-left: 10px;
+  width: 100%;
+}
+.gapminder-friends .groups-column .group-member .member-info .member-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+.gapminder-friends .groups-column .group-member .member-info .member-title {
+  color: #c9c9c9;
+  display: block;
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.gapminder-friends .groups-column .group-column-footer {
+  margin-top: 10px;
+  font-weight: 400;
+}
+.gapminder-friends .sneak-peeks {
+  margin: 0;
+  padding: 0;
+}
+.gapminder-friends .sneak-peeks .sneak-peek {
+  align-items: stretch;
+  background-color: #fff;
+  color: #353535;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.gapminder-friends .sneak-peeks .sneak-peek:last-child {
+  margin-bottom: 0;
+}
+.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-thumbnail {
+  margin-right: 10px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-info .info-item-type {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-info .info-title {
+  font-size: 20px;
+  line-height: 1;
+  padding-bottom: 25px;
+}
+.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-info .info-meta {
+  color: #939393;
+  font-size: 13px;
+  position: absolute;
+  bottom: 0;
+}
+.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-actions {
+  min-width: 120px;
+  position: relative;
+  display: flex;
+}
+.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-actions .btn {
+  position: absolute;
+  bottom: 0;
+}
+.gapminder-friends .member-search {
+  display: flex;
+  flex-direction: row;
+}
+.gapminder-friends .member-search .search-field {
+  width: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.gapminder-friends .member-search .search-button .btn {
+  background-color: transparent;
+  color: #eb4498;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 30px;
+}
+.gapminder-friends .member-search .search-button .btn:active {
+  box-shadow: none;
+}
+.gapminder-friends .view-all {
+  font-size: 22px;
+  text-align: right;
+}
+.section-wide {
+  padding: 40px;
+}
+.section-wide h2 {
+  margin-top: 0;
+}
+.section-wide .splash {
+  text-align: center;
+}
+.section-wide .splash h2 {
+  font-size: 39px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.section-wide .splash .cta {
+  border-radius: 10px;
+  font-size: 27px;
+  padding: 7px 80px;
+}
+.section-wide .friends-menu {
+  display: flex;
+  font-size: 34px;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.section-wide .friends-menu li {
+  flex-grow: 1;
+  flex-basis: 100px;
+  text-align: center;
+}
+.section-wide-condensed {
+  padding: 20px 40px !important;
+}
+.section-wide-primary {
+  padding: 40px;
+  background-color: #fff;
+}
+.section-wide-primary h2 {
+  margin-top: 0;
+}
+.section-wide-primary .splash {
+  text-align: center;
+}
+.section-wide-primary .splash h2 {
+  font-size: 39px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.section-wide-primary .splash .cta {
+  border-radius: 10px;
+  font-size: 27px;
+  padding: 7px 80px;
+}
+.section-wide-primary .friends-menu {
+  display: flex;
+  font-size: 34px;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.section-wide-primary .friends-menu li {
+  flex-grow: 1;
+  flex-basis: 100px;
+  text-align: center;
+}
+.section-wide-primary + .section-wide-primary {
+  padding-top: 0;
+}
+.section-wide-secondary {
+  padding: 40px;
+  background-color: #f1f2f2;
+}
+.section-wide-secondary h2 {
+  margin-top: 0;
+}
+.section-wide-secondary .splash {
+  text-align: center;
+}
+.section-wide-secondary .splash h2 {
+  font-size: 39px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.section-wide-secondary .splash .cta {
+  border-radius: 10px;
+  font-size: 27px;
+  padding: 7px 80px;
+}
+.section-wide-secondary .friends-menu {
+  display: flex;
+  font-size: 34px;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.section-wide-secondary .friends-menu li {
+  flex-grow: 1;
+  flex-basis: 100px;
+  text-align: center;
+}
+.section-wide-secondary + .section-wide-secondary {
+  padding-top: 0;
+}
+.section-wide-border-bottom {
+  border-bottom: 2px solid #e4e4e4;
+}
+.section-wide-border-bottom + .section-wide-primary {
+  padding-top: 40px;
+}
+.column-narrow {
+  margin: 0 auto;
+  width: 60%;
+}
+.wide-profile {
+  display: flex;
+  flex-direction: row;
+}
+.wide-profile .profile-picture {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.wide-profile .profile-info {
+  width: 100%;
+  position: relative;
+}
+.wide-profile .profile-info .info-heading {
+  display: block;
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.wide-profile .profile-info p {
+  margin-bottom: 0;
+}
+.wide-profile .profile-info .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .account-controller.admin-action .grid-view {
   margin-top: 20px;
@@ -9983,92 +10417,112 @@ Styleguide 5
     width: 75%;
   }
 }
-.dashboard-controller.index-action .dashboard-profile {
+.dashboard-controller.index-action .news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dashboard-controller.index-action .news-list li {
+  margin-bottom: 8px;
+}
+.dashboard-controller.index-action .news-list li a {
+  color: currentcolor;
+  font-weight: 400;
+}
+.dashboard-controller.index-action .news-list li .news-item {
+  display: flex;
+  flex-direction: row;
+}
+.dashboard-controller.index-action .news-list li .news-item .item-date {
+  flex-grow: 0;
+  margin-left: 30px;
+}
+.dashboard-controller.tasks-action .dashboard-profile {
   padding-bottom: 35px;
   border-bottom: 2px solid #e4e4e4;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-profile .profile-info {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-info {
     float: left;
     width: 66.66666666666666%;
   }
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-picture {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-picture {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-profile .profile-info .profile-picture {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-picture {
     float: left;
     width: 41.66666666666667%;
   }
 }
 @media (min-width: 992px) {
-  .dashboard-controller.index-action .dashboard-profile .profile-info .profile-picture {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-picture {
     float: left;
     width: 33.33333333333333%;
   }
 }
 @media (min-width: 1200px) {
-  .dashboard-controller.index-action .dashboard-profile .profile-info .profile-picture {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-picture {
     float: left;
     width: 25%;
   }
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts {
     float: left;
     width: 58.333333333333336%;
   }
 }
 @media (min-width: 992px) {
-  .dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts {
     float: left;
     width: 66.66666666666666%;
   }
 }
 @media (min-width: 1200px) {
-  .dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts {
     float: left;
     width: 58.333333333333336%;
   }
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar {
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 40px;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:before,
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:before,
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:before,
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:before,
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar .profile-points {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar .profile-points {
   position: relative;
   float: left;
   width: 50%;
@@ -10079,10 +10533,10 @@ Styleguide 5
   font-size: 20px;
   font-weight: 100;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar .profile-points .glyphicon {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar .profile-points .glyphicon {
   font-size: 17px;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar .profile-actions {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar .profile-actions {
   position: relative;
   float: left;
   width: 50%;
@@ -10091,20 +10545,20 @@ Styleguide 5
   padding-right: 15px;
   text-align: right;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar .profile-actions .glyphicon {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar .profile-actions .glyphicon {
   font-size: 20px;
   color: #939393;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-name {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-name {
   font-size: 44.5px;
   font-weight: 100;
   margin: 0;
   margin-bottom: 10px;
 }
-.dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-title {
+.dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-title {
   font-weight: 100;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -10114,46 +10568,46 @@ Styleguide 5
   border-left: 2px solid #e4e4e4;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-profile .recent-updates {
+  .dashboard-controller.tasks-action .dashboard-profile .recent-updates {
     float: left;
     width: 33.33333333333333%;
   }
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar {
   margin-left: -15px;
   margin-right: -15px;
   font-size: 12px;
   margin-bottom: 30px;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar:before,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar:before,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar:before,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar:before,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-title {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-title {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-title {
+  .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-title {
     float: left;
     width: 50%;
   }
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-title .updates-heading {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-title .updates-heading {
   color: #000;
   font-size: 12px;
   font-weight: 100;
@@ -10161,7 +10615,7 @@ Styleguide 5
   text-transform: uppercase;
   margin: 0;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -10169,12 +10623,12 @@ Styleguide 5
   text-align: right;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all {
+  .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all {
     float: left;
     width: 50%;
   }
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link {
   margin-bottom: 0;
   vertical-align: middle;
   background-image: none;
@@ -10219,26 +10673,26 @@ Styleguide 5
   text-decoration: underline;
   color: #353535;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus {
   color: #ffffff;
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.disabled,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.disabled,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -10246,223 +10700,223 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover {
   background-color: #bcbcbc;
   color: #fff;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-default {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-default {
   background-color: #c9c9c9;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-default:hover {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-default:hover {
   background-color: #bcbcbc;
   color: #fff;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary {
   color: #ffffff;
   background-color: #eb4498;
   border-color: #e92d8b;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary {
   color: #ffffff;
   background-color: #e71f84;
   border-color: #c3156d;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary {
   background-image: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled]:hover,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled]:focus,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled]:active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled.active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled].active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled]:hover,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled]:focus,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled]:active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.disabled.active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary[disabled].active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary.active {
   background-color: #eb4498;
   border-color: #e92d8b;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary .badge {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-primary .badge {
   color: #eb4498;
   background-color: #fff;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success {
   color: #ffffff;
   background-color: #22d23e;
   border-color: #1ebc38;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success {
   color: #ffffff;
   background-color: #1caf34;
   border-color: #168728;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success {
   background-image: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled]:hover,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled]:focus,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled]:active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled.active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled].active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled]:hover,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled]:focus,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled]:active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.disabled.active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success[disabled].active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success.active {
   background-color: #22d23e;
   border-color: #1ebc38;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success .badge {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-success .badge {
   color: #22d23e;
   background-color: #fff;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning {
   color: #3d3d3d;
   background-color: #feee74;
   border-color: #feeb5b;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning {
   color: #3d3d3d;
   background-color: #fee94b;
   border-color: #fde31e;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning {
   background-image: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled]:hover,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled]:focus,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled]:active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled.active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled].active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled]:hover,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled]:focus,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled]:active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.disabled.active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning[disabled].active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning.active {
   background-color: #feee74;
   border-color: #feeb5b;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning .badge {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-warning .badge {
   color: #feee74;
   background-color: #fff;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger {
   color: #ffffff;
   background-color: #e0575c;
   border-color: #dc4147;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger {
   color: #ffffff;
   background-color: #da353b;
   border-color: #bd2329;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger {
   background-image: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled]:hover,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled]:focus,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled]:active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled.active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled].active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled]:hover,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled]:focus,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled]:active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.disabled.active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger[disabled].active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger.active {
   background-color: #e0575c;
   border-color: #dc4147;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger .badge {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-danger .badge {
   color: #e0575c;
   background-color: #fff;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info {
   color: #ffffff;
   background-color: #b7c1d8;
   border-color: #a6b3cf;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info {
   color: #ffffff;
   background-color: #9daaca;
   border-color: #7f91ba;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.active,
-.open .dropdown-toggle.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.active,
+.open .dropdown-toggle.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info {
   background-image: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled]:hover,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled]:focus,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled]:active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled.active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled].active,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled]:hover,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled]:focus,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled]:active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.disabled.active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info[disabled].active,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info.active {
   background-color: #b7c1d8;
   border-color: #a6b3cf;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info .badge {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-info .badge {
   color: #b7c1d8;
   background-color: #fff;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link {
   color: #eb4498;
   font-weight: normal;
   cursor: pointer;
@@ -10470,37 +10924,37 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   font-weight: 100;
   text-decoration: underline;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:active {
   border-color: transparent;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:focus {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:focus {
   color: #cd1672;
   text-decoration: underline;
   background-color: transparent;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link[disabled]:hover,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link[disabled]:focus,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:focus {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link[disabled]:hover,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link[disabled]:focus,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:focus {
   color: #f1f2f2;
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:hover {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link:hover {
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark {
   color: #eb4498;
   font-weight: normal;
   cursor: pointer;
@@ -10509,170 +10963,170 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   text-decoration: underline;
   color: #353535;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:active {
   border-color: transparent;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:focus {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:focus {
   color: #cd1672;
   text-decoration: underline;
   background-color: transparent;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark[disabled]:hover,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark[disabled]:focus,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:focus {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark[disabled]:hover,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark[disabled]:focus,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:focus {
   color: #f1f2f2;
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover {
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link-dark:hover {
   color: #353535;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link.btn-icon-link {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link.btn-icon-link {
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link.btn-icon-link .btn-label {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.btn-link.btn-icon-link .btn-label {
   text-decoration: underline;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:empty {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:empty {
   display: none;
 }
-.btn .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link {
+.btn .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link {
   position: relative;
   top: -1px;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-sm {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-sm {
   font-size: 14px;
   padding: 7px 20px;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-xs {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-xs {
   font-size: 12px;
   padding: 4px 15px;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-primary {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-primary {
   background-color: #eb4498;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-success {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-success {
   background-color: #22d23e;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-warning {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-warning {
   background-color: #feee74;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-danger {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-danger {
   background-color: #e0575c;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-info {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link.badge-info {
   background-color: #b7c1d8;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:active,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link[disabled],
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:active,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link[disabled],
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:active {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:active {
   border-color: transparent;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus {
   color: #cd1672;
   text-decoration: underline;
   background-color: transparent;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link[disabled]:hover,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link[disabled]:focus,
-fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link[disabled]:hover,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link[disabled]:focus,
+fieldset[disabled] .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:focus {
   color: #f1f2f2;
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover {
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates-top-bar .updates-view-all .view-all-link:hover {
   color: #353535;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates {
   margin-left: -15px;
   margin-right: -15px;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates:before,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates:before,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates:before,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates:before,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content {
+  .dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content {
     float: left;
     width: 100%;
   }
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list {
   margin: 0;
   padding: 0;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li {
   margin-left: -15px;
   margin-right: -15px;
   list-style: none;
   margin-bottom: 45px;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:before,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:before,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:before,
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:before,
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:after {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:last-child {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li:last-child {
   margin-bottom: 0;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li .update-image {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li .update-image {
   position: relative;
   float: left;
   width: 25%;
@@ -10680,7 +11134,7 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   padding-left: 15px;
   padding-right: 15px;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li .update-info {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li .update-info {
   position: relative;
   float: left;
   width: 75%;
@@ -10690,90 +11144,90 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   font-size: 12px;
   font-weight: 100;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li .update-info .update-title {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li .update-info .update-title {
   display: block;
   font-weight: bold;
 }
-.dashboard-controller.index-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li .update-info .update-description {
+.dashboard-controller.tasks-action .dashboard-profile .recent-updates .updates .updates-content .updates-list li .update-info .update-description {
   display: block;
 }
-.dashboard-controller.index-action .dashboard-tasks-container {
+.dashboard-controller.tasks-action .dashboard-tasks-container {
   border-bottom: 2px solid #e4e4e4;
   margin-top: 40px;
   padding-bottom: 40px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container:last-child {
+.dashboard-controller.tasks-action .dashboard-tasks-container:last-child {
   border-bottom: none;
   padding-bottom: 0;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar {
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 30px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar:before,
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar:before,
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar:before,
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar:before,
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar .top-bar-title {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar .top-bar-title {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar .top-bar-title {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar .top-bar-title {
     float: left;
     width: 50%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar .top-bar-title .tasks-heading {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar .top-bar-title .tasks-heading {
   font-size: 44.5px;
   font-weight: 100;
   margin: 0;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar .top-bar-actions {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar .top-bar-actions {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks-top-bar .top-bar-actions {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks-top-bar .top-bar-actions {
     float: left;
     width: 50%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks {
     float: left;
     width: 100%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -10787,171 +11241,171 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   border: none;
   border-radius: 2px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item blockquote {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item blockquote {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item:last-child {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item:last-child {
   margin-bottom: 0;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task {
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 0px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:before,
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:before,
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:before,
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:before,
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:last-child {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task:last-child {
   margin-bottom: 0;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail {
     float: left;
     width: 33.33333333333333%;
   }
 }
 @media (min-width: 992px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail {
     float: left;
     width: 25%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .thumbnail-container {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .thumbnail-container {
   margin-bottom: 10px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link {
   text-decoration: underline;
   color: #444444;
   font-size: 11px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link:hover {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link:hover {
   text-decoration: none;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-dark {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-dark {
   color: #444444;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-primary {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-primary {
   color: #eb4498;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-success {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-success {
   color: #22d23e;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-warning {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-warning {
   color: #feee74;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-danger {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-danger {
   color: #e0575c;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-info {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-info {
   color: #b7c1d8;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-sm {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-sm {
   font-size: 14px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-xs {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail .skip-link-container .skip-this-link.link-xs {
   font-size: 11px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info {
     float: left;
     width: 66.66666666666666%;
   }
 }
 @media (min-width: 992px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info {
     float: left;
     width: 75%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar {
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 10px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:before,
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:before,
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:before,
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:before,
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text {
     float: left;
     width: 50%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text .action-heading {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text .action-heading {
   color: #000;
   font-size: 12px;
   font-weight: 100;
   line-height: 22px;
   text-transform: uppercase;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts {
     float: left;
     width: 50%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: right;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item {
   min-width: 10px;
   padding: 3px 7px;
   font-size: 14px;
@@ -10972,91 +11426,91 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   display: inline-block;
   margin-right: 6px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item:empty {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item:empty {
   display: none;
 }
-.btn .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item {
+.btn .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item {
   position: relative;
   top: -1px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-sm {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-sm {
   font-size: 14px;
   padding: 7px 20px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-xs {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-xs {
   font-size: 12px;
   padding: 4px 15px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-primary {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-primary {
   background-color: #eb4498;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-success {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-success {
   background-color: #22d23e;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-warning {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-warning {
   background-color: #feee74;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-danger {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-danger {
   background-color: #e0575c;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-info {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item.badge-info {
   background-color: #b7c1d8;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item:last-child {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts .facts-list .facts-list-item:last-child {
   margin-right: 0;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-title {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-title {
   margin-bottom: 30px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-title .task-heading {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-title .task-heading {
   color: #000;
   font-size: 16px;
   font-weight: 600;
   margin: 0;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar {
   margin-left: -15px;
   margin-right: -15px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:before,
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:before,
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:before,
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:before,
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:after {
   content: " ";
   display: table;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:after {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar:after {
   clear: both;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress {
     float: left;
     width: 50%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress .progress-info {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress .progress-info {
   margin-bottom: 3px;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress .progress-info .progress-title {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress .progress-info .progress-title {
   color: #000;
   font-size: 12px;
   font-weight: 100;
   line-height: 22px;
   text-transform: uppercase;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress .progress-info .progress-percentage {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-progress .progress-info .progress-percentage {
   color: #000;
   font-size: 12px;
   font-weight: 100;
@@ -11064,7 +11518,7 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   text-transform: uppercase;
   font-weight: bold;
 }
-.dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-actions {
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-actions {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -11072,12 +11526,12 @@ fieldset[disabled] .dashboard-controller.index-action .dashboard-profile .recent
   text-align: right;
 }
 @media (min-width: 992px) {
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-actions {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .task-actions {
     float: left;
     width: 50%;
   }
 }
-.dashboard-controller.index-action .dashboard-tasks-in-progress {
+.dashboard-controller.tasks-action .dashboard-tasks-in-progress {
   border-bottom: 2px solid #e4e4e4;
   padding-bottom: 40px;
 }
@@ -12016,6 +12470,8 @@ fieldset[disabled] .item-controller .item-progress .progress-item .item-action .
   padding: 8px 25px;
   font-size: 14px;
   padding: 7px 20px;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
   border-radius: 0;
 }
 .item-controller.edit-action .item-top-actions .preview-button:focus,
@@ -14354,6 +14810,8 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
   padding: 8px 25px;
   font-size: 14px;
   padding: 7px 20px;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
   color: #ffffff;
   background-color: #eb4498;
   border-color: #e92d8b;
@@ -14839,6 +15297,7 @@ fieldset[disabled] .site-controller .item-type-introduction .intro-head .intro-a
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-appearance: none;
   border: 1px solid #e4e4e4;
   border-radius: 3px;
   font-size: 16px;
@@ -14943,6 +15402,8 @@ textarea.commentsBlock textarea {
   padding: 8px 25px;
   font-size: 14px;
   padding: 7px 20px;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
 }
 .commentsBlock .sendComment:focus {
   outline: thin dotted;
@@ -16806,6 +17267,17 @@ Styleguide 9
   vertical-align: middle;
 }
 @media (max-width: 767px) {
+  .navbar.navbar-secondary .navbar-brand {
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar.navbar-secondary .navbar-nav > li.search-link a {
+    opacity: 0;
+    width: 0;
+  }
+}
+@media (max-width: 767px) {
   .navbar .navbar-brand {
     border-right: none;
     padding: 20.5px 15px;
@@ -16833,6 +17305,23 @@ Styleguide 9
     padding-left: 30px;
   }
 }
+@media (max-width: 991px) {
+  .gapminder-friends .gapminder-friends-logo img {
+    width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .gapminder-friends .groups-column {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .section-wide {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 @media (max-width: 767px) {
   .account-controller.dashboard-action .dashboard-profile .profile-info .profile-facts .profile-top-bar {
     margin-bottom: 10px;
@@ -16845,16 +17334,16 @@ Styleguide 9
   }
 }
 @media (max-width: 767px) {
-  .dashboard-controller.index-action .dashboard-profile .profile-info .profile-facts .profile-top-bar {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-info .profile-facts .profile-top-bar {
     margin-bottom: 10px;
   }
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .btn-primary {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .btn-primary {
     display: block;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
-  .dashboard-controller.index-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail img {
+  .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-thumbnail img {
     width: 100%;
     height: auto;
   }
@@ -16899,6 +17388,9 @@ Styleguide 9
   .profile-controller.edit-action .profile-summary .summary-info .summary-heading {
     margin-top: 50px;
   }
+}
+.layout-fluid .content {
+  margin-top: 67px;
 }
 @media (min-width: 768px) {
   .layout-narrow {
