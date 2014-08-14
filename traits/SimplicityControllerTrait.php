@@ -50,9 +50,7 @@ trait SimplicityControllerTrait
 
         !empty($rootItem)
             ? $breadcrumbs[$rootItem[0]] = $rootItem[1] // override breadcrumb root
-            : $breadcrumbs['Home'] = Yii::app()->homeUrl;
-
-        // NICE: Yii::app()->breadcrumbRootLabel
+            : $breadcrumbs[Yii::app()->breadcrumbRootLabel] = Yii::app()->homeUrl;
 
         foreach ($items as $label => $url) {
             if (!isset($breadcrumbs[$label])) {
@@ -123,6 +121,5 @@ trait SimplicityControllerTrait
 
         parent::setPageTitle($value);
     }
-
 
 } 
