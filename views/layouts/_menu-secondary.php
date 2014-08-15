@@ -43,6 +43,13 @@
                         'id' => 'loginLink',
                         'class' => 'login-link',
                     ),
+                    array(
+                        'label' => Yii::t('app', 'Logout'),
+                        'url' => array('/account/authenticate/logout'),
+                        'visible' => !Yii::app()->user->isGuest,
+                        'id' => 'logoutLink',
+                        'class' => 'logout-link',
+                    ),
                 ),
             ),
         )
