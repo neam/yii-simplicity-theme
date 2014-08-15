@@ -20,7 +20,6 @@ if ($page !== null) {
         'fluid' => true,
         'htmlOptions' => array(
             'containerOptions' => array(
-                'class' => 'container-fluid',
             ),
         ),
         'items' => array(
