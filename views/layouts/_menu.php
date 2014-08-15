@@ -13,9 +13,16 @@ if ($page !== null) {
 <?php $this->widget(
     '\TbNavbar',
     array(
-        'brandLabel' => Html::renderLogo(),
+        'brandLabel' => Yii::t('app', 'Gapminder.org Home'),
+        'brandUrl' => $this->getBrandUrl(),
         'collapse' => true,
         'display' => TbHtml::NAVBAR_DISPLAY_FIXEDTOP,
+        'fluid' => true,
+        'htmlOptions' => array(
+            'containerOptions' => array(
+                'class' => 'container-fluid',
+            ),
+        ),
         'items' => array(
             array(
                 'class' => '\TbNav',
@@ -27,12 +34,6 @@ if ($page !== null) {
                     'class' => 'navbar-left',
                 ),
                 'items' => array(
-                    array(
-                        'label' => Yii::t('app', 'Dashboard'),
-                        'icon' => TbHtml::ICON_TH,
-                        'url' => array('/dashboard/index'),
-                        'visible' => !Yii::app()->user->isGuest,
-                    ),
                 ),
             ),
             array(
@@ -94,6 +95,11 @@ if ($page !== null) {
                         )
                     ),
                     array(
+                        'label' => t('app', 'Search'),
+                        'url' => array('#'),
+                        'class' => 'search-link',
+                    ),
+                    array(
                         'label' => Yii::t('app', 'Logout'),
                         'url' => array('/account/authenticate/logout'),
                         'visible' => !Yii::app()->user->isGuest,
@@ -101,10 +107,16 @@ if ($page !== null) {
                         'class' => 'visible-xs-block visible-xs',
                     ),
                     array(
-                        'label' => Yii::t('app', 'Login'),
+                        'label' => Yii::t('app', 'Sign In'),
                         'url' => user()->loginUrl,
                         'visible' => Yii::app()->user->isGuest,
                         'id' => 'loginLink',
+                    ),
+                    array(
+                        'label' => Yii::t('app', 'Logout'),
+                        'url' => array('/account/authenticate/logout'),
+                        'visible' => Yii::app()->user->isGuest,
+                        'id' => 'logoutLink',
                     ),
                 ),
             ),

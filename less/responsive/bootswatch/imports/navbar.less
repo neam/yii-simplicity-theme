@@ -1,7 +1,8 @@
-@media (max-width: @screen-xs-max) {
-  .navbar {
+.navbar {
+  @media (max-width: @screen-xs-max) {
     .navbar-brand {
       border-right: none;
+      font-size: 15px;
       padding: 20.5px 15px;
       width: 190px;
 
@@ -14,8 +15,17 @@
     .navbar-nav {
       margin: 0 -15px;
 
-      & > li {
-        & > a {
+      > li {
+        &.search-link {
+          margin-left: 0;
+          margin-right: 0;
+
+          &:before {
+            display: none;
+          }
+        }
+
+        > a {
           border: none;
           padding: 20px 15px;
         }
@@ -40,6 +50,19 @@
               padding: 20px 15px;
               padding-left: 30px;
             }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    .navbar-nav {
+      > li {
+        &.search-link {
+          a {
+            opacity: 0;
+            width: 0;
           }
         }
       }

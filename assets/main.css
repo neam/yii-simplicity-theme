@@ -6746,132 +6746,84 @@ td.visible-print {
   }
 }
 .navbar {
-  font-weight: 100;
+  border: none;
+  margin-bottom: 0;
+  min-height: 1px;
 }
-.navbar .navbar-brand {
-  padding-right: 40px;
-  border-right: 2px solid #e4e4e4;
-}
-.navbar .navbar-nav > li:last-child > a {
-  border-left: none;
-}
-.navbar .navbar-nav > li > a {
-  border-left: 2px solid #e4e4e4;
-  border-right: 2px solid #e4e4e4;
-  padding: 27px 25px 26px;
-}
-.navbar .navbar-nav > li > a:hover {
-  border-color: #e4e4e4;
-}
-.navbar-default {
-  border: 2px solid #e4e4e4;
-}
-.navbar-default .navbar-nav .open > a:focus {
-  border-color: #e4e4e4;
-}
-.navbar-default .navbar-nav .language-menu .dropdown-menu {
+.navbar.navbar-default .navbar-nav .language-menu .dropdown-menu {
   height: 460px;
   overflow-y: scroll;
 }
-.navbar-default .navbar-nav .language-menu .dropdown-menu::-webkit-scrollbar {
+.navbar.navbar-default .navbar-nav .language-menu .dropdown-menu::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
 }
-.navbar-default .navbar-nav .language-menu .dropdown-menu::-webkit-scrollbar-thumb {
+.navbar.navbar-default .navbar-nav .language-menu .dropdown-menu::-webkit-scrollbar-thumb {
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 }
-.navbar-default .navbar-nav .language-menu .dropdown-menu > li > a {
+.navbar.navbar-default .navbar-nav .language-menu .dropdown-menu > li > a {
   font-weight: 400;
 }
-.navbar-default .navbar-toggle {
+.navbar.navbar-default .navbar-toggle {
   background-color: #ffffff;
   border: 2px solid #e4e4e4;
   border-radius: 3px;
 }
-.navbar-default .navbar-toggle:hover {
+.navbar.navbar-default .navbar-toggle:hover {
   background-color: #f1f2f2;
 }
-.navbar-default .navbar-toggle:focus {
+.navbar.navbar-default .navbar-toggle:focus {
   background-color: #ffffff;
   outline: none;
 }
-.navbar-default .navbar-toggle .icon-bar {
+.navbar.navbar-default .navbar-toggle .icon-bar {
   background-color: #eb4498;
 }
-.dropdown-menu {
+.navbar .navbar-brand,
+.navbar .nav > li > a {
   border: none;
-  border-radius: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 7px;
 }
-.dropdown-menu > li > a {
-  font-weight: 100;
+.navbar .navbar-brand {
+  border: none;
+  font-weight: 500;
+  vertical-align: top;
+  padding-left: 22px;
 }
-@media (min-width: 768px) {
-  .navbar.navbar-secondary {
-    border: none;
-    margin-bottom: 0;
-    min-height: 1px;
-  }
-  .navbar.navbar-secondary .navbar-brand,
-  .navbar.navbar-secondary .nav > li > a {
-    border: none;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 7px;
-  }
-  .navbar.navbar-secondary .navbar-brand {
-    border: none;
-    font-weight: 500;
-    vertical-align: top;
-    padding-left: 22px;
-  }
-  .navbar.navbar-secondary .navbar-brand:before {
-    content: "\e072";
-  }
-  .navbar.navbar-secondary .navbar-brand:before {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    font-size: 7px;
-    font-family: 'Glyphicons Halflings';
-    position: absolute;
-    left: 12px;
-  }
-  .navbar.navbar-secondary .navbar-nav {
-    color: #707070;
-  }
-  .navbar.navbar-secondary .navbar-nav > li.search-link {
-    margin-right: 20px;
-  }
-  .navbar.navbar-secondary .navbar-nav > li.search-link:before {
-    content: "\e003";
-  }
-  .navbar.navbar-secondary .navbar-nav > li.search-link:before {
-    font-family: 'Glyphicons Halflings';
-    font-size: 20px;
-    position: absolute;
-    top: 4px;
-  }
-  .navbar.navbar-secondary .navbar-nav > li.login-link {
-    padding-right: 30px;
-  }
-  .navbar.navbar-secondary .navbar-nav > li.login-link:before {
-    content: "\e072";
-  }
-  .navbar.navbar-secondary .navbar-nav > li.login-link:before {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    font-family: 'Glyphicons Halflings';
-    font-size: 7px;
-    position: absolute;
-    right: 12px;
-    top: 12px;
-  }
-  .navbar.navbar-secondary .container-fluid {
-    width: 100% !important;
-  }
+.navbar .navbar-brand:before {
+  content: "\e072";
+}
+.navbar .navbar-brand:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  font-size: 7px;
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  left: 12px;
+}
+.navbar .navbar-nav {
+  color: #707070;
+}
+.navbar .navbar-nav > li.search-link {
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.navbar .navbar-nav > li.search-link:before {
+  content: "\e003";
+}
+.navbar .navbar-nav > li.search-link:before {
+  font-family: 'Glyphicons Halflings';
+  font-size: 20px;
+  position: absolute;
+  top: 4px;
+}
+.navbar .container-fluid {
+  width: 100% !important;
 }
 /*
 Buttons
@@ -17267,19 +17219,9 @@ Styleguide 9
   vertical-align: middle;
 }
 @media (max-width: 767px) {
-  .navbar.navbar-secondary .navbar-brand {
-    font-size: 15px;
-  }
-}
-@media (min-width: 992px) {
-  .navbar.navbar-secondary .navbar-nav > li.search-link a {
-    opacity: 0;
-    width: 0;
-  }
-}
-@media (max-width: 767px) {
   .navbar .navbar-brand {
     border-right: none;
+    font-size: 15px;
     padding: 20.5px 15px;
     width: 190px;
   }
@@ -17290,6 +17232,13 @@ Styleguide 9
   .navbar .navbar-nav {
     margin: 0 -15px;
   }
+  .navbar .navbar-nav > li.search-link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .navbar .navbar-nav > li.search-link:before {
+    display: none;
+  }
   .navbar .navbar-nav > li > a {
     border: none;
     padding: 20px 15px;
@@ -17297,12 +17246,18 @@ Styleguide 9
   .navbar .glyphicon {
     display: none;
   }
-  .navbar-default .navbar-toggle {
-    margin: 5px 10px;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    padding: 20px 15px;
-    padding-left: 30px;
+}
+.navbar .navbar-default .navbar-toggle {
+  margin: 5px 10px;
+}
+.navbar .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  padding: 20px 15px;
+  padding-left: 30px;
+}
+@media (min-width: 992px) {
+  .navbar .navbar-nav > li.search-link a {
+    opacity: 0;
+    width: 0;
   }
 }
 @media (max-width: 991px) {
