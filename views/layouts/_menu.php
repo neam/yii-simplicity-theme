@@ -111,12 +111,7 @@ if ($page !== null) {
                         'url' => user()->loginUrl,
                         'visible' => Yii::app()->user->isGuest,
                         'id' => 'loginLink',
-                    ),
-                    array(
-                        'label' => Yii::t('app', 'Logout'),
-                        'url' => array('/account/authenticate/logout'),
-                        'visible' => Yii::app()->user->isGuest,
-                        'id' => 'logoutLink',
+                        'class' => 'login-class',
                     ),
                 ),
             ),
