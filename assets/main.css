@@ -17305,10 +17305,6 @@ Styleguide 9
   }
 }
 @media (max-width: 767px) {
-  .item-controller.edit-action .item-top-actions .preview-button,
-  .item-controller.translate-action .item-top-actions .preview-button {
-    display: none;
-  }
   .item-controller.edit-action .item-header .header-text .item-heading,
   .item-controller.translate-action .item-header .header-text .item-heading {
     margin-top: 0;
@@ -17343,6 +17339,12 @@ Styleguide 9
 @media (min-width: 768px) {
   .profile-controller.edit-action .profile-summary .summary-info .summary-heading {
     margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .signup-controller.index-action {
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 .layout-fluid .content {
