@@ -11,10 +11,9 @@
  * http://creativecommons.org/licenses/MIT/
  */
 -->
-
 <body>
 <div id="fileupload">
-    <form action="<?php echo $this->controller->createUrl('/p3media/import/uploadFile') ?>" method="POST" enctype="multipart/form-data">
+    <form action="<?php echo $this->controller->createUrl('/p3media/import/uploadFile',$_GET )?>" method="POST" enctype="multipart/form-data">
         <div class="fileupload-buttonbar">
             <label class="fileinput-button">
                 <span>Add files...</span>
