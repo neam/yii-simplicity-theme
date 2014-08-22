@@ -10097,6 +10097,27 @@ Styleguide 5
   font-size: 22px;
   text-align: right;
 }
+.gapminder-friends .button-list {
+  padding-left: 0;
+  list-style: none;
+}
+.gapminder-friends .button-list > li {
+  margin-bottom: 10px;
+}
+.gapminder-friends .button-list a {
+  background: #f1f2f2;
+  border-radius: 1px;
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.gapminder-friends .invite-friends:before {
+  content: "\2b";
+}
+.gapminder-friends .invite-friends:before {
+  padding-right: 5px;
+}
 .section-wide {
   padding: 40px;
 }
@@ -10128,6 +10149,9 @@ Styleguide 5
   flex-grow: 1;
   flex-basis: 100px;
   text-align: center;
+}
+.section-wide .friends-menu a {
+  text-decoration: none;
 }
 .section-wide-condensed {
   padding: 20px 40px !important;
@@ -10165,6 +10189,9 @@ Styleguide 5
   flex-basis: 100px;
   text-align: center;
 }
+.section-wide-primary .friends-menu a {
+  text-decoration: none;
+}
 .section-wide-primary + .section-wide-primary {
   padding-top: 0;
 }
@@ -10200,6 +10227,9 @@ Styleguide 5
   flex-grow: 1;
   flex-basis: 100px;
   text-align: center;
+}
+.section-wide-secondary .friends-menu a {
+  text-decoration: none;
 }
 .section-wide-secondary + .section-wide-secondary {
   padding-top: 0;

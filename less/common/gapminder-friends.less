@@ -197,4 +197,26 @@
     font-size: 22px;
     text-align: right;
   }
+
+  .button-list {
+    .list-unstyled;
+    > li {
+      margin-bottom: 10px;
+    }
+    a {
+      background: @gray-light;
+      border-radius: 1px;
+      display: inline-block;
+      padding: 5px 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  .invite-friends {
+    .glyphicon-plus;
+    &:before {
+      padding-right: 5px;
+    }
+  }
 }
