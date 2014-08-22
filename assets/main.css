@@ -17223,7 +17223,7 @@ Styleguide 9
   .navbar .navbar-brand {
     border-right: none;
     font-size: 15px;
-    padding: 20.5px 15px;
+    padding: 20.5px 22px;
     width: 190px;
   }
   .navbar .navbar-brand img {
@@ -17255,7 +17255,7 @@ Styleguide 9
   padding: 20px 15px;
   padding-left: 30px;
 }
-@media (min-width: 992px) {
+@media (min-width: 767px) {
   .navbar .navbar-nav > li.search-link a {
     opacity: 0;
     width: 0;
