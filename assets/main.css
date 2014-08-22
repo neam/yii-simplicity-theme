@@ -14531,37 +14531,37 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
     width: 25%;
   }
 }
-.registration-controller {
+.signup-controller {
   font-weight: 100;
 }
-.registration-controller label {
+.signup-controller label {
   font-weight: 400;
 }
-.registration-controller.register-action .registration-heading {
+.signup-controller.index-action .registration-heading {
   margin: 0;
   margin-bottom: 50px;
 }
-.registration-controller.register-action .radio {
+.signup-controller.index-action .radio {
   padding-left: 0;
 }
-.registration-controller.register-action .registration-container {
+.signup-controller.index-action .registration-container {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  .registration-controller.register-action .registration-container {
+  .signup-controller.index-action .registration-container {
     float: left;
     width: 66.66666666666666%;
   }
 }
 @media (min-width: 992px) {
-  .registration-controller.register-action .registration-container {
+  .signup-controller.index-action .registration-container {
     margin-left: 16.666666666666664%;
   }
 }
-.registration-controller.register-action .registration-container .container-right {
+.signup-controller.index-action .registration-container .container-right {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -14569,24 +14569,24 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
   padding-left: 40px;
 }
 @media (min-width: 992px) {
-  .registration-controller.register-action .registration-container .container-right {
+  .signup-controller.index-action .registration-container .container-right {
     float: left;
     width: 50%;
   }
 }
-.registration-controller.register-action .registration-container .container-left {
+.signup-controller.index-action .registration-container .container-left {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  .registration-controller.register-action .registration-container .container-left {
+  .signup-controller.index-action .registration-container .container-left {
     float: left;
     width: 50%;
   }
 }
-.registration-controller.register-action .registration-container .container-left .container-inner {
+.signup-controller.index-action .registration-container .container-left .container-inner {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -14601,21 +14601,21 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
   border-radius: 2px;
   padding: 30px;
 }
-.registration-controller.register-action .registration-container .container-left .container-inner blockquote {
+.signup-controller.index-action .registration-container .container-left .container-inner blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
-.registration-controller.register-action .registration-container .container-left .container-inner blockquote {
+.signup-controller.index-action .registration-container .container-left .container-inner blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
-.registration-controller.register-action .registration-container .brand-logo {
+.signup-controller.index-action .registration-container .brand-logo {
   text-align: center;
 }
-.registration-controller.register-action .registration-container .benefits {
+.signup-controller.index-action .registration-container .benefits {
   margin-top: 50px;
 }
-.registration-controller.register-action .registration-container .benefits .benefit {
+.signup-controller.index-action .registration-container .benefits .benefit {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -14623,42 +14623,42 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
   margin-bottom: 20px;
 }
 @media (min-width: 992px) {
-  .registration-controller.register-action .registration-container .benefits .benefit {
+  .signup-controller.index-action .registration-container .benefits .benefit {
     float: left;
     width: 100%;
   }
 }
-.registration-controller.register-action .registration-container .benefits .benefit:last-child {
+.signup-controller.index-action .registration-container .benefits .benefit:last-child {
   margin-bottom: 0;
 }
-.registration-controller.register-action .registration-container .benefits .benefit .benefit-image {
+.signup-controller.index-action .registration-container .benefits .benefit .benefit-image {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  .registration-controller.register-action .registration-container .benefits .benefit .benefit-image {
+  .signup-controller.index-action .registration-container .benefits .benefit .benefit-image {
     float: left;
     width: 33.33333333333333%;
   }
 }
-.registration-controller.register-action .registration-container .benefits .benefit .benefit-description {
+.signup-controller.index-action .registration-container .benefits .benefit .benefit-description {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  .registration-controller.register-action .registration-container .benefits .benefit .benefit-description {
+  .signup-controller.index-action .registration-container .benefits .benefit .benefit-description {
     float: left;
     width: 66.66666666666666%;
   }
 }
-.registration-controller.register-action .registration-container .form-actions {
+.signup-controller.index-action .registration-container .form-actions {
   margin: 50px 0 30px;
 }
-.registration-controller.registrationsuccess-action .message-container {
+.signup-controller.registrationsuccess-action .message-container {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -14666,37 +14666,37 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
   text-align: center;
 }
 @media (min-width: 992px) {
-  .registration-controller.registrationsuccess-action .message-container {
+  .signup-controller.registrationsuccess-action .message-container {
     float: left;
     width: 33.33333333333333%;
   }
 }
 @media (min-width: 992px) {
-  .registration-controller.registrationsuccess-action .message-container {
+  .signup-controller.registrationsuccess-action .message-container {
     margin-left: 33.33333333333333%;
   }
 }
-.registration-controller.registrationsuccess-action .message-container .page-actions {
+.signup-controller.registrationsuccess-action .message-container .page-actions {
   margin-top: 50px;
 }
-.registration-controller.activated-action .message-container {
+.signup-controller.activated-action .message-container {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 992px) {
-  .registration-controller.activated-action .message-container {
+  .signup-controller.activated-action .message-container {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  .registration-controller.activated-action .message-container {
+  .signup-controller.activated-action .message-container {
     margin-left: 25%;
   }
 }
-.registration-controller.activated-action .page-actions {
+.signup-controller.activated-action .page-actions {
   margin-top: 50px;
 }
 .site-controller .item-type-introduction .intro-head {
