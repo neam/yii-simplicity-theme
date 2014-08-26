@@ -6810,15 +6810,16 @@ td.visible-print {
   position: absolute;
   left: 12px;
 }
-.navbar .navbar-brand.gapminder-friends-brand {
+.navbar .navbar-brand.gapminder-friends-brand > img {
+  margin-right: 7px;
+}
+.navbar .navbar-brand.gapminder-friends-brand span {
   color: #eb4498;
   font-size: 30px;
   font-weight: bold;
+  position: relative;
   text-transform: none;
   vertical-align: bottom;
-}
-.navbar .navbar-brand.gapminder-friends-brand > img {
-  margin-right: 4px;
 }
 .navbar .navbar-nav {
   color: #707070;
@@ -17272,6 +17273,9 @@ Styleguide 9
   .navbar .navbar-brand img {
     width: 100%;
     height: auto;
+  }
+  .navbar .navbar-brand.gapminder-friends-brand span {
+    font-size: 20px;
   }
   .navbar .navbar-nav {
     margin: 0 -15px;
