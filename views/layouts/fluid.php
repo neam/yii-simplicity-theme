@@ -12,5 +12,6 @@
                 <?php echo $content; ?>
             </div>
         </div>
+        <?php $this->renderPartial('simplicity-theme.views.layouts._footer'); ?>
     </div>
 <?php $this->endContent(); ?>
