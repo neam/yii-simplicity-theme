@@ -3,6 +3,10 @@
   margin-bottom: 0;
   min-height: 1px;
 
+  &.gapminder-friends-brand {
+    border-bottom: 1px solid @gray;
+  }
+
   &.navbar-default {
     .navbar-nav {
       .language-menu {
@@ -59,20 +63,33 @@
   }
 
   .navbar-brand {
-    .glyphicon-play;
     border: none;
     position: relative;
     font-weight: 500;
     padding-left: 22px;
     vertical-align: top;
 
-    &:before {
-      .rotate(180deg);
-      font-size: 7px;
-      font-family: 'Glyphicons Halflings';
-      position: absolute;
-      left: 12px;
+    &.gapminder-org-brand {
+      .glyphicon-play;
+      &:before {
+        .rotate(180deg);
+        font-size: 7px;
+        font-family: 'Glyphicons Halflings';
+        position: absolute;
+        left: 12px;
+      }
     }
+    &.gapminder-friends-brand {
+      > img {
+        margin-right: 4px;
+      }
+      color: @brand-primary;
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: none;
+      vertical-align: bottom;
+    }
+
   }
 
   .navbar-nav {

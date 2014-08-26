@@ -9,19 +9,24 @@ if ($page !== null) {
 } else {
     $translation = null;
 }
+if (!empty($this->homeBrandLabel)) {
+    $brand = $this->homeBrandLabel;
+    $brandOptions = $navbarHtmlOptions = array('class' => 'gapminder-org-brand');
+} else {
+    $brand = TbHtml::image('/images/logo.png', 'Gapminder') . '<span>' . t('app', 'friends') . '</span>';
+    $brandOptions = $navbarHtmlOptions = array('class' => 'gapminder-friends-brand');
+}
 ?>
 <?php $this->widget(
     '\TbNavbar',
     array(
-        'brandLabel' => Yii::t('app', 'Gapminder.org Home'),
+        'brandLabel' => $brand,
         'brandUrl' => $this->getBrandUrl(),
+        'brandOptions' => $brandOptions,
         'collapse' => true,
         'display' => TbHtml::NAVBAR_DISPLAY_FIXEDTOP,
         'fluid' => true,
-        'htmlOptions' => array(
-            'containerOptions' => array(
-            ),
-        ),
+        'htmlOptions' => $navbarHtmlOptions,
         'items' => array(
             array(
                 'class' => '\TbNav',
