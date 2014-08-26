@@ -6840,6 +6840,9 @@ td.visible-print {
 .navbar .container-fluid {
   width: 100% !important;
 }
+.navbar #accountMenuLink img {
+  margin-right: 10px;
+}
 /*
 Buttons
 
@@ -17292,6 +17295,9 @@ Styleguide 9
     padding: 20px 15px;
   }
   .navbar .glyphicon {
+    display: none;
+  }
+  .navbar #accountMenuLink img {
     display: none;
   }
 }

@@ -45,6 +45,7 @@ if (!empty($this->homeBrandLabel)) {
                 'htmlOptions' => array(
                     'class' => 'navbar-right',
                 ),
+                'encodeLabel' => false,
                 'items' => array(
                     array(
                         'class' => 'language-menu',
@@ -53,7 +54,14 @@ if (!empty($this->homeBrandLabel)) {
                         'items' => Controller::getLanguageMenuItems(),
                     ),
                     array(
-                        'label' => Yii::app()->user->name,
+                        'label' => t('app', 'Search'),
+                        'url' => array('#'),
+                        'class' => 'search-link',
+                    ),
+                    array(
+                        'label' => isset(user()->model->profile->picture_media_id)
+                            ? user()->renderPicture('user-profile-picture-mini') . user()->name
+                            : user()->name,
                         'visible' => !Yii::app()->user->isGuest,
                         'id' => 'accountMenuLink',
                         'items' => array(
@@ -96,12 +104,7 @@ if (!empty($this->homeBrandLabel)) {
                                 'id' => 'logoutLink',
                                 'class' => 'hidden-xs',
                             ),
-                        )
-                    ),
-                    array(
-                        'label' => t('app', 'Search'),
-                        'url' => array('#'),
-                        'class' => 'search-link',
+                        ),
                     ),
                     array(
                         'label' => Yii::t('app', 'Logout'),
