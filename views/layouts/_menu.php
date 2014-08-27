@@ -13,7 +13,7 @@ if (!empty($this->homeBrandLabel)) {
     $brand = $this->homeBrandLabel;
     $brandOptions = $navbarHtmlOptions = array('class' => 'gapminder-org-brand');
 } else {
-    $brand = TbHtml::image('/images/logo.png', 'Gapminder') . '<span>' . t('app', 'friends') . '</span>';
+    $brand = TbHtml::image(baseUrl('/images/logo.png'), 'Gapminder') . '<span>' . t('app', 'friends') . '</span>';
     $brandOptions = $navbarHtmlOptions = array('class' => 'gapminder-friends-brand');
 }
 ?>
