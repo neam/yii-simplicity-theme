@@ -30,6 +30,56 @@
   }
 
   &.tasks-action {
+
+    .dashboard-profile-wrapper {
+      background: @gray-light;
+      padding: 20px 10px;
+
+      .dashboard-profile {
+        .make-row();
+      }
+
+      .name {
+        font-size: 40px;
+        margin: 0;
+      }
+
+      .profile-image  {
+        .make-md-column(2);
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .profile-facts {
+        .make-md-column(8);
+
+        .content-wrapper {
+          .make-md-column(12);
+        }
+
+        .groups {
+          .list-inline;
+          margin-top: 20px;
+          > li {
+            padding-left: 0;
+          }
+        }
+      }
+
+      .profile-actions {
+        .make-md-column(2);
+        .actions {
+          float: right;
+          a {
+            font-weight: bold;
+            padding: 0;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    /*
     .dashboard-profile {
       padding-bottom: 35px;
       border-bottom: @grid-border-size solid @grid-border-color;
@@ -159,7 +209,7 @@
           }
         }
       }
-    }
+    }*/
 
     .dashboard-tasks-container {
       border-bottom: @grid-border-size solid @grid-border-color;

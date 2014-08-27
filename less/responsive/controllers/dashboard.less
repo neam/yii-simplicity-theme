@@ -5,16 +5,6 @@
     }
 
     &.tasks-action {
-      .dashboard-profile {
-        .profile-info {
-          .profile-facts {
-            .profile-top-bar {
-              margin-bottom: 10px;
-            }
-          }
-        }
-      }
-
       .dashboard-tasks-container {
         .tasks {
           .tasks-list {
@@ -36,6 +26,36 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .dashboard-controller {
+    &.tasks-action {
+      .dashboard-profile {
+        * {
+          text-align: center;
+        }
+        .profile-actions .actions {
+          float: none;
+          margin: 20px auto 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .dashboard-controller {
+    &.tasks-action {
+      .dashboard-profile {
+        .profile-facts {
+          .groups {
+            margin-top: 40px;
           }
         }
       }
