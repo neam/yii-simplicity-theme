@@ -13781,6 +13781,65 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
     width: 58.333333333333336%;
   }
 }
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:before,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:before,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:before,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:before,
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after {
+  content: " ";
+  display: table;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after {
+  clear: both;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:before,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:before,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:before,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:before,
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after {
+  content: " ";
+  display: table;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields:after {
+  clear: both;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-group,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-group,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-group,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-group {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-group,
+  .item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-group,
+  .item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-group,
+  .item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-group {
+    float: left;
+    width: 100%;
+  }
+}
 .item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-control,
 .item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-control,
 .item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-control,
@@ -13792,6 +13851,16 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
 .item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-control:last-child,
 .item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .form-control:last-child {
   margin-bottom: 0;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .select2,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .select2,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .select2,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .select2,
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .select2 .select2-container,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .select2 .select2-container,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .select2 .select2-container,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-fields .select2 .select2-container {
+  height: auto;
 }
 .item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .step-progress .progress-dots,
 .item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .step-progress .progress-dots,
@@ -13840,12 +13909,66 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
   display: inline-block;
   vertical-align: top;
 }
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:before,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:before,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:before,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:before,
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after {
+  content: " ";
+  display: table;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after {
+  clear: both;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:before,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:before,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:before,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:before,
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after {
+  content: " ";
+  display: table;
+}
+.item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after,
+.item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions:after {
+  clear: both;
+}
 .item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions .step-action-buttons,
 .item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions .step-action-buttons,
 .item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions .step-action-buttons,
 .item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions .step-action-buttons {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-top: 20px;
   text-align: right;
+}
+@media (min-width: 992px) {
+  .item-controller.edit-action .item-row .row-column .item-well .item-content .content-secondary .item-actions .step-action-buttons,
+  .item-controller.translate-action .item-row .row-column .item-well .item-content .content-secondary .item-actions .step-action-buttons,
+  .item-controller.prepareforpublishing-action .item-row .row-column .item-well .item-content .content-secondary .item-actions .step-action-buttons,
+  .item-controller.prepareforreview-action .item-row .row-column .item-well .item-content .content-secondary .item-actions .step-action-buttons {
+    float: left;
+    width: 100%;
+  }
 }
 .item-controller.edit-action .workflow-actions,
 .item-controller.translate-action .workflow-actions,
