@@ -10047,7 +10047,7 @@ Styleguide 5
   margin: 0;
   padding: 0;
 }
-.gapminder-friends .sneak-peeks .sneak-peek {
+.gapminder-friends .sneak-peeks .item {
   align-items: stretch;
   background-color: #fff;
   color: #353535;
@@ -10055,42 +10055,43 @@ Styleguide 5
   padding: 10px;
   margin-bottom: 10px;
 }
-.gapminder-friends .sneak-peeks .sneak-peek:last-child {
+.gapminder-friends .sneak-peeks .item:last-child {
   margin-bottom: 0;
 }
-.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-thumbnail {
-  margin-right: 10px;
+.gapminder-friends .sneak-peeks .item .item-thumbnail {
   flex-grow: 0;
   flex-shrink: 0;
+  margin-right: 10px;
+  min-width: 110px;
 }
-.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-info {
+.gapminder-friends .sneak-peeks .item .item-info {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   position: relative;
 }
-.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-info .info-item-type {
+.gapminder-friends .sneak-peeks .item .item-info .info-item-type {
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 7px;
 }
-.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-info .info-title {
+.gapminder-friends .sneak-peeks .item .item-info .info-title {
   font-size: 20px;
   line-height: 1;
   padding-bottom: 25px;
 }
-.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-info .info-meta {
+.gapminder-friends .sneak-peeks .item .item-info .info-meta {
   color: #939393;
   font-size: 13px;
   position: absolute;
   bottom: 0;
 }
-.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-actions {
+.gapminder-friends .sneak-peeks .item .item-actions {
   min-width: 120px;
   position: relative;
   display: flex;
 }
-.gapminder-friends .sneak-peeks .sneak-peek .sneak-peek-actions .btn {
+.gapminder-friends .sneak-peeks .item .item-actions .btn {
   position: absolute;
   bottom: 0;
 }
@@ -16972,6 +16973,58 @@ Styleguide 9
 @media (max-width: 767px) {
   .gapminder-friends .groups-column {
     margin-bottom: 20px;
+  }
+  .gapminder-friends .sneak-peeks .item {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: block;
+  }
+  .gapminder-friends .sneak-peeks .item:before,
+  .gapminder-friends .sneak-peeks .item:after {
+    content: " ";
+    display: table;
+  }
+  .gapminder-friends .sneak-peeks .item:after {
+    clear: both;
+  }
+  .gapminder-friends .sneak-peeks .item:before,
+  .gapminder-friends .sneak-peeks .item:after {
+    content: " ";
+    display: table;
+  }
+  .gapminder-friends .sneak-peeks .item:after {
+    clear: both;
+  }
+  .gapminder-friends .sneak-peeks .item section {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+  }
+  .gapminder-friends .sneak-peeks .item .item-thumbnail {
+    min-width: 0;
+  }
+  .gapminder-friends .sneak-peeks .item .item-info span {
+    margin-bottom: 10px;
+  }
+  .gapminder-friends .sneak-peeks .item .item-info .info-title {
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+  .gapminder-friends .sneak-peeks .item .item-info .info-item-type {
+    padding-top: 10px;
+  }
+  .gapminder-friends .sneak-peeks .item .item-info .info-meta {
+    position: relative;
+  }
+  .gapminder-friends .sneak-peeks .item .item-actions {
+    display: block;
+  }
+  .gapminder-friends .sneak-peeks .item .item-actions .btn {
+    position: relative;
   }
 }
 @media (max-width: 991px) {
