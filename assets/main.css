@@ -10975,6 +10975,13 @@ Styleguide 5
 .examquestion-controller.edit-action .related-text .alert-link {
   color: #e6e6e6;
 }
+.group-controller.view-action h1 {
+  color: #eb4498;
+  font-weight: bold;
+}
+.group-controller.view-action h1 small {
+  font-size: 33.333%;
+}
 .item-controller .alerts {
   margin-left: -15px;
   margin-right: -15px;
