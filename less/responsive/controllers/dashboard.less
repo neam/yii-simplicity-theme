@@ -5,6 +5,15 @@
     }
 
     &.tasks-action {
+      .dashboard-profile {
+        * {
+          text-align: center;
+        }
+        .profile-actions .actions {
+          float: none;
+          margin: 20px auto 0;
+        }
+      }
       .dashboard-tasks-container {
         .tasks {
           .tasks-list {
@@ -33,16 +42,12 @@
   }
 }
 
-@media (max-width: @screen-sm-max) {
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
   .dashboard-controller {
     &.tasks-action {
       .dashboard-profile {
-        * {
-          text-align: center;
-        }
-        .profile-actions .actions {
-          float: none;
-          margin: 20px auto 0;
+        .profile-image {
+          float: left;
         }
       }
     }

@@ -16921,6 +16921,13 @@ Styleguide 9
   }
 }
 @media (max-width: 767px) {
+  .dashboard-controller.tasks-action .dashboard-profile * {
+    text-align: center;
+  }
+  .dashboard-controller.tasks-action .dashboard-profile .profile-actions .actions {
+    float: none;
+    margin: 20px auto 0;
+  }
   .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-bottom-bar .btn-primary {
     display: block;
     width: 100%;
@@ -16932,13 +16939,9 @@ Styleguide 9
     height: auto;
   }
 }
-@media (max-width: 991px) {
-  .dashboard-controller.tasks-action .dashboard-profile * {
-    text-align: center;
-  }
-  .dashboard-controller.tasks-action .dashboard-profile .profile-actions .actions {
-    float: none;
-    margin: 20px auto 0;
+@media (min-width: 768px) and (max-width: 991px) {
+  .dashboard-controller.tasks-action .dashboard-profile .profile-image {
+    float: left;
   }
 }
 @media (min-width: 1200px) {
