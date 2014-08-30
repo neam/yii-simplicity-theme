@@ -1,7 +1,7 @@
 <?php /** @var string $content */ ?>
 <?php $this->beginContent(WorkflowUi::LAYOUT_MAIN); ?>
     <div class="layout-regular">
-        <?php $this->renderPartial('vendor.neam.yii-simplicity-theme.views.layouts._menu'); ?>
+        <?php $this->renderPartial('simplicity-theme.app-views.layout-elements._menu'); ?>
         <div class="container">
             <div class="content">
                 <div class="row">
@@ -11,6 +11,6 @@
                 <?php echo $content; ?>
             </div>
         </div>
-        <?php $this->renderPartial('vendor.neam.yii-simplicity-theme.views.layouts._footer'); ?>
+        <?php $this->renderPartial('simplicity-theme.app-views.layout-elements._footer'); ?>
     </div>
 <?php $this->endContent(); ?>
