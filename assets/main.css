@@ -10779,6 +10779,24 @@ Styleguide 5
   font-weight: 100;
   line-height: 22px;
   text-transform: uppercase;
+  border-bottom: 1px solid #d6d6d6;
+  color: #939393;
+  display: block;
+}
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text .action-heading .action-item-type {
+  color: #707070;
+  font-weight: 600;
+}
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text .action-heading .action-separator {
+  font-size: 8px;
+  top: 0;
+}
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text .action-heading .hint-tooltip {
+  color: #939393;
+}
+.dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text .action-heading .hint-tooltip .glyphicon {
+  font-size: 10px;
+  top: -1px;
 }
 .dashboard-controller.tasks-action .dashboard-tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-facts {
   position: relative;

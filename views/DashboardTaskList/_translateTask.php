@@ -12,7 +12,19 @@
     <div class="task-top-bar">
         <div class="task-action-text">
             <span class="action-heading">
-                <?php echo Yii::t('app', 'Translate a {itemType}:', array('{itemType}' => $data['model_class'])); // TODO: Get action heading dynamically. ?>
+                <?php echo Yii::t(
+                    'app',
+                    '{action} {separator} <span class="action-item-type">{itemType}</span> {tooltip}',
+                    array(
+                        '{action}' => ucfirst(Yii::t('app', $data['task'])),
+                        '{itemType}' => $data['model_class'],
+                        '{separator}' => TbHtml::icon(TbHtml::ICON_CHEVRON_RIGHT, array('class' => 'action-separator')),
+                        '{tooltip}' => Html::hintTooltip(
+                            $this->getItem($data['model_class'], $data['id'])->itemDescription,
+                            array('placement' => TbHtml::TOOLTIP_PLACEMENT_BOTTOM)
+                        ),
+                    )
+                ); ?>
             </span>
         </div>
         <div class="task-facts">
