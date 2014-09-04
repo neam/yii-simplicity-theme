@@ -53,6 +53,11 @@ trait SimplicityControllerTrait
             : $breadcrumbs[Yii::app()->breadcrumbRootLabel] = Yii::app()->homeUrl;
 
         foreach ($items as $label => $url) {
+            // Disable links to browse pages
+            if ($url[0] === 'browse') {
+                $url = array();
+            }
+
             if (!isset($breadcrumbs[$label])) {
                 $breadcrumbs[$label] = $url;
             }
