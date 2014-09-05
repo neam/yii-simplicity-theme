@@ -10139,6 +10139,68 @@ Styleguide 5
 .gapminder-friends .invite-friends:before {
   padding-right: 5px;
 }
+.page-controls {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 20px;
+}
+.page-controls:before,
+.page-controls:after {
+  content: " ";
+  display: table;
+}
+.page-controls:after {
+  clear: both;
+}
+.page-controls:before,
+.page-controls:after {
+  content: " ";
+  display: table;
+}
+.page-controls:after {
+  clear: both;
+}
+.page-controls a:hover {
+  text-decoration: none;
+}
+.page-controls .controls-left {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .page-controls .controls-left {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+.page-controls .controls-center {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .page-controls .controls-center {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+.page-controls .controls-right {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: right !important;
+  text-align: right;
+}
+@media (min-width: 992px) {
+  .page-controls .controls-right {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
 .section-wide {
   padding: 40px;
 }
@@ -14119,6 +14181,53 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
     float: left;
     width: 25%;
   }
+}
+.profile-controller.profile-action .profile-summary {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.profile-controller.profile-action .profile-summary:before,
+.profile-controller.profile-action .profile-summary:after {
+  content: " ";
+  display: table;
+}
+.profile-controller.profile-action .profile-summary:after {
+  clear: both;
+}
+.profile-controller.profile-action .profile-summary:before,
+.profile-controller.profile-action .profile-summary:after {
+  content: " ";
+  display: table;
+}
+.profile-controller.profile-action .profile-summary:after {
+  clear: both;
+}
+.profile-controller.profile-action .profile-summary .summary-picture {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .profile-controller.profile-action .profile-summary .summary-picture {
+    float: left;
+    width: 25%;
+  }
+}
+.profile-controller.profile-action .profile-summary .summary-info {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .profile-controller.profile-action .profile-summary .summary-info {
+    float: left;
+    width: 75%;
+  }
+}
+.profile-controller.profile-action .profile-summary .summary-info .info-heading {
+  margin-top: 0;
 }
 .signup-controller {
   font-weight: 100;
