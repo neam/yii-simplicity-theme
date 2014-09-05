@@ -13657,26 +13657,27 @@ fieldset[disabled] .item-controller.prepareforreview-action .item-top-actions .p
   display: block;
   font-size: 50px;
 }
-.profile-controller.edit-action .profile-summary .summary-roles {
+.profile-controller.edit-action .profile-summary .summary-sidebox {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  text-align: right;
 }
 @media (min-width: 768px) {
-  .profile-controller.edit-action .profile-summary .summary-roles {
+  .profile-controller.edit-action .profile-summary .summary-sidebox {
     float: left;
     width: 33.33333333333333%;
   }
 }
 @media (min-width: 992px) {
-  .profile-controller.edit-action .profile-summary .summary-roles {
+  .profile-controller.edit-action .profile-summary .summary-sidebox {
     float: left;
     width: 33.33333333333333%;
   }
 }
 @media (min-width: 1200px) {
-  .profile-controller.edit-action .profile-summary .summary-roles {
+  .profile-controller.edit-action .profile-summary .summary-sidebox {
     float: left;
     width: 33.33333333333333%;
   }
@@ -17006,7 +17007,7 @@ Styleguide 9
     padding-right: 15px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .profile-controller.edit-action .profile-summary .summary-info .summary-heading {
     margin-top: 50px;
   }
