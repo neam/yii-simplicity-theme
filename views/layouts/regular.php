@@ -4,9 +4,7 @@
         <?php $this->renderPartial('simplicity-theme.app-views.layout-elements._menu'); ?>
         <div class="container">
             <div class="content">
-                <div class="row">
-                    <?php echo $this->renderBreadcrumbs(); ?>
-                </div>
+                <?php echo $this->renderBreadcrumbs(); ?>
                 <?php $this->widget('\TbAlert'); ?>
                 <?php echo $content; ?>
             </div>
