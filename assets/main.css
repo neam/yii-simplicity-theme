@@ -10602,6 +10602,9 @@ Styleguide 5
   font-size: 8px;
   top: 0;
 }
+.tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text .action-heading .tooltip {
+  text-transform: none;
+}
 .tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top-bar .task-action-text .action-heading .hint-tooltip {
   color: #939393;
 }
