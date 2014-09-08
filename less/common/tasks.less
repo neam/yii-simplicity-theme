@@ -1,11 +1,14 @@
 .tasks-container {
-  border-bottom: @grid-border-size solid @grid-border-color;
   margin-top: 40px;
   padding-bottom: 40px;
 
   &:last-child {
     border-bottom: none;
     padding-bottom: 0;
+  }
+
+  &.tasks-container-section {
+    border-bottom: @grid-border-size solid @grid-border-color;
   }
 
   .tasks-top-bar {
