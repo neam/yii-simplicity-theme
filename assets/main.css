@@ -16992,21 +16992,6 @@ td.navbar-desktop {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .navbar-desktop.visible-sm {
-    display: block !important;
-  }
-  table.navbar-desktop.visible-sm {
-    display: table;
-  }
-  tr.navbar-desktop.visible-sm {
-    display: table-row !important;
-  }
-  th.navbar-desktop.visible-sm,
-  td.navbar-desktop.visible-sm {
-    display: table-cell !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
   .navbar-desktop {
     display: block !important;
   }
@@ -17018,6 +17003,21 @@ td.navbar-desktop {
   }
   th.navbar-desktop,
   td.navbar-desktop {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-desktop.visible-md {
+    display: block !important;
+  }
+  table.navbar-desktop.visible-md {
+    display: table;
+  }
+  tr.navbar-desktop.visible-md {
+    display: table-row !important;
+  }
+  th.navbar-desktop.visible-md,
+  td.navbar-desktop.visible-md {
     display: table-cell !important;
   }
 }
@@ -17033,6 +17033,21 @@ td.navbar-desktop {
   }
   th.navbar-desktop.visible-lg,
   td.navbar-desktop.visible-lg {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-desktop {
+    display: block !important;
+  }
+  table.navbar-desktop {
+    display: table;
+  }
+  tr.navbar-desktop {
+    display: table-row !important;
+  }
+  th.navbar-desktop,
+  td.navbar-desktop {
     display: table-cell !important;
   }
 }
@@ -17114,21 +17129,6 @@ td.navbar-mobile {
   }
   th.navbar-mobile.visible-lg,
   td.navbar-mobile.visible-lg {
-    display: table-cell !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar-mobile {
-    display: block !important;
-  }
-  table.navbar-mobile {
-    display: table;
-  }
-  tr.navbar-mobile {
-    display: table-row !important;
-  }
-  th.navbar-mobile,
-  td.navbar-mobile {
     display: table-cell !important;
   }
 }
