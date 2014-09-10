@@ -10327,17 +10327,9 @@ Styleguide 5
   margin: 0 auto;
   width: 60%;
 }
-.wide-profile {
-  display: flex;
-  flex-direction: row;
-}
-.wide-profile .profile-picture {
-  flex-shrink: 0;
-  margin-right: 20px;
-}
-.wide-profile .profile-info {
+.wide-profile .profile-picture img {
   width: 100%;
-  position: relative;
+  height: auto;
 }
 .wide-profile .profile-info .info-heading {
   display: block;
@@ -10347,11 +10339,6 @@ Styleguide 5
 }
 .wide-profile .profile-info p {
   margin-bottom: 0;
-}
-.wide-profile .profile-info .btn {
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 .tasks-container {
   margin-top: 40px;
@@ -17209,6 +17196,48 @@ td.navbar-mobile {
 @media (min-width: 768px) {
   .friends-menu a {
     font-size: 34px;
+  }
+}
+@media (max-width: 767px) {
+  .wide-profile .profile-picture {
+    margin-bottom: 20px;
+  }
+  .wide-profile .profile-info .info-heading {
+    font-size: 19px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .wide-profile .profile-info p {
+    margin-bottom: 20px;
+  }
+  .wide-profile .profile-info .btn {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .wide-profile {
+    display: flex;
+    flex-direction: row;
+  }
+  .wide-profile .profile-picture {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  .wide-profile .profile-picture img {
+    width: 100%;
+    height: auto;
+  }
+  .wide-profile .profile-info {
+    width: 100%;
+    position: relative;
+  }
+  .wide-profile .profile-info .btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 @media (max-width: 767px) {

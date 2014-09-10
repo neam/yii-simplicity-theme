@@ -66,18 +66,14 @@
 }
 
 .wide-profile {
-  display: flex;
-  flex-direction: row;
-
   .profile-picture {
-    flex-shrink: 0;
-    margin-right: 20px;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .profile-info {
-    width: 100%;
-    position: relative;
-
     .info-heading {
       display: block;
       font-size: 40px;
@@ -87,12 +83,6 @@
 
     p {
       margin-bottom: 0;
-    }
-
-    .btn {
-      position: absolute;
-      bottom: 0;
-      left: 0;
     }
   }
 }
