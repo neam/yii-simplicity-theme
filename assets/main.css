@@ -9608,13 +9608,15 @@ fieldset[disabled] .select .select-button.btn-link-dark:focus {
 }
 .static-text-field-label {
   display: block;
-  font-weight: bold;
+  font-weight: 600;
+  height: 25px;
 }
 .static-text-field {
   display: block;
   font-weight: 100;
   line-height: 1.428571429;
-  padding: 12px;
+  padding-top: 6px;
+  padding-bottom: 12px;
 }
 form span.help-block.error {
   color: #e0575c;
