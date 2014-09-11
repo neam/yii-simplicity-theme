@@ -14926,6 +14926,65 @@ fieldset[disabled] .site-controller .item-type-introduction .intro-head .intro-a
 .breadcrumbs li a {
   color: #353535;
 }
+.captcha {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 20px;
+}
+.captcha:before,
+.captcha:after {
+  content: " ";
+  display: table;
+}
+.captcha:after {
+  clear: both;
+}
+.captcha:before,
+.captcha:after {
+  content: " ";
+  display: table;
+}
+.captcha:after {
+  clear: both;
+}
+.captcha .captcha-image {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .captcha .captcha-image {
+    float: left;
+    width: 58.333333333333336%;
+  }
+}
+.captcha .captcha-image .captcha-content {
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+}
+.captcha .captcha-image .captcha-content img {
+  height: 53px;
+  width: auto;
+  vertical-align: top;
+}
+.captcha .captcha-image .captcha-content a {
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+.captcha .form-group {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .captcha .form-group {
+    float: left;
+    width: 41.66666666666667%;
+  }
+}
 .commentsBlock textarea {
   display: block;
   width: 100%;
@@ -17335,6 +17394,45 @@ td.navbar-mobile {
   }
   .layout-narrow .container {
     width: inherit;
+  }
+}
+@media (max-width: 767px) {
+  .captcha .captcha-image .captcha-content {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .captcha .captcha-image .captcha-content img {
+    width: 120px;
+  }
+  .captcha .captcha-image .captcha-content a {
+    padding: 15px 15px 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .captcha .captcha-image .captcha-content {
+    text-align: center;
+  }
+  .captcha .captcha-image .captcha-content img {
+    width: 120px;
+  }
+  .captcha .captcha-image .captcha-content a {
+    padding: 15px 15px 16px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .captcha .captcha-image .captcha-content img {
+    width: 80px;
+  }
+  .captcha .captcha-image .captcha-content a {
+    padding: 16px 12px 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .captcha .captcha-image .captcha-content img {
+    width: 120px;
+  }
+  .captcha .captcha-image .captcha-content a {
+    padding: 16px 12px 15px;
   }
 }
 .mejs-container .mejs-captions-layer {
