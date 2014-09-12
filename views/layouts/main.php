@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     <link rel="icon" href="<?php echo baseUrl('favicon.ico'); ?>" type="image/x-icon"/>
+    <?php app()->workflowUi->registerFonts(); ?>
     <?php app()->workflowUi->registerCss(); ?>
     <?php app()->workflowUi->registerScripts(); ?>
     <?php app()->yiistrap->fixPanningAndZooming(); ?>
