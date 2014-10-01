@@ -1,5 +1,8 @@
 <?php
 
+$config['theme'] = 'yii-simplicity-theme';
+$config['components']['themeManager']['basePath'] = $applicationDirectory . '/../vendor/neam';
+
 $config['aliases']['yii-simplicity-theme'] = 'vendor.neam.yii-simplicity-theme';
 
 $config['import'][] = 'vendor.neam.yii-simplicity-theme.traits.SimplicityControllerTrait';
