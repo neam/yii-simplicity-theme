@@ -53,7 +53,7 @@ $brandOptions = $navbarHtmlOptions = array('class' => 'app-brand');
                         'class' => 'search-link',
                     ),
                     array(
-                        'label' => isset(user()->model->profile->picture_media_id)
+                        'label' => isset(user()->model->profile->profile_picture_media_id)
                                 ? user()->renderPicture('user-profile-picture-mini') . user()->name
                                 : user()->name,
                         'visible' => !Yii::app()->user->isGuest,
