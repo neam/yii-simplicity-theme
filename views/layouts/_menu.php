@@ -42,6 +42,11 @@ if ($page !== null) {
                                 'url' => array('/p1campaign/add'),
                                 'visible' => !Yii::app()->user->isGuest
                             ),
+                            array(
+                                'label' => Yii::t('app', '360 Campaign'),
+                                'url' => array('/fullcampaign/add'),
+                                'visible' => !Yii::app()->user->isGuest
+                            ),
                         ),
                     ),
                 ),
