@@ -1,0 +1,51 @@
+.gapminder-friends {
+  @media (max-width: @screen-sm-max) {
+    .gapminder-friends-logo {
+      img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    .groups-column {
+      margin-bottom: 20px;
+    }
+    .sneak-peeks {
+      .item {
+        .make-row();
+        display: block;
+
+        section {
+          .make-xs-column(12);
+          text-align: center;
+        }
+        .item-thumbnail {
+          min-width: 0;
+        }
+        .item-info {
+          span {
+            margin-bottom: 10px;
+          }
+          .info-title {
+            padding-bottom: 0;
+            padding-top: 10px;
+          }
+          .info-item-type {
+            padding-top: 10px;
+          }
+          .info-meta {
+            position: relative;
+          }
+        }
+        .item-actions {
+          display: block;
+          .btn {
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}

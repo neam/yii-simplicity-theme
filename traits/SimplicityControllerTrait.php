@@ -50,9 +50,7 @@ trait SimplicityControllerTrait
 
         !empty($rootItem)
             ? $breadcrumbs[$rootItem[0]] = $rootItem[1] // override breadcrumb root
-            : $breadcrumbs['Home'] = Yii::app()->homeUrl;
-
-        // NICE: Yii::app()->breadcrumbRootLabel
+            : $breadcrumbs[Yii::app()->breadcrumbRootLabel] = Yii::app()->homeUrl;
 
         foreach ($items as $label => $url) {
             if (!isset($breadcrumbs[$label])) {
@@ -71,35 +69,43 @@ trait SimplicityControllerTrait
     {
         $breadcrumbs = $this->breadcrumbs;
 
-        ob_start();
+        if (count($this->breadcrumbs) > 0) {
+            ob_start();
 
-        echo CHtml::openTag('ul', array('class' => 'breadcrumbs'));
+            echo '<div class="row">';
 
-        end($breadcrumbs);
-        $lastLink = key($breadcrumbs);
+            echo CHtml::openTag('ul', array('class' => 'breadcrumbs'));
 
-        foreach ($breadcrumbs as $label => $url) {
-            if (is_string($label) || is_array($url)) {
-                echo '<li>';
-                echo strtr('<a href="{url}">{label}</a>', array(
-                    '{url}' => CHtml::normalizeUrl($url),
-                    '{label}' => CHtml::encode($label),
-                ));
-            } else {
-                echo '<li class="active">';
-                echo str_replace('{label}', CHtml::encode($url), '{label}');
+            end($breadcrumbs);
+            $lastLink = key($breadcrumbs);
+
+            foreach ($breadcrumbs as $label => $url) {
+                if (is_string($label) || is_array($url)) {
+                    echo '<li>';
+                    echo strtr('<a href="{url}">{label}</a>', array(
+                        '{url}' => CHtml::normalizeUrl($url),
+                        '{label}' => CHtml::encode($label),
+                    ));
+                } else {
+                    echo '<li class="active">';
+                    echo str_replace('{label}', CHtml::encode($url), '{label}');
+                }
+
+                if ($lastLink !== $label) {
+                    echo '';
+                }
+
+                echo '</li>';
             }
 
-            if ($lastLink !== $label) {
-                echo '';
-            }
+            echo CHtml::closeTag('ul');
 
-            echo '</li>';
+            echo '</div>';
+
+            return ob_get_clean();
+        } else {
+            return '';
         }
-
-        echo CHtml::closeTag('ul');
-
-        return ob_get_clean();
     }
 
     /**
@@ -123,6 +129,5 @@ trait SimplicityControllerTrait
 
         parent::setPageTitle($value);
     }
-
 
 } 

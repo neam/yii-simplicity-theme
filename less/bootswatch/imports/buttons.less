@@ -119,6 +119,8 @@ Styleguide 1.2
   .btn-sm;
   .badge;
   .badge.badge-sm;
+  font-weight: 100 !important; // TODO: Try to get rid of !important
+  letter-spacing: 0 !important; // TODO: Try to get rid of !important
 }
 
 /*
@@ -223,4 +225,25 @@ Styleguide 1.6
     .btn;
     .btn-xs;
   }
+}
+
+/*
+Condensed button
+
+Chiefly used for maintaining a consistent height with other condensed form fields.
+
+Markup:
+<button class="btn btn-condensed">버튼</button>
+<button class="btn btn-condensed btn-primary">버튼</button>
+<button class="btn btn-condensed btn-success">버튼</button>
+<button class="btn btn-condensed btn-warning">버튼</button>
+<button class="btn btn-condensed btn-danger">버튼</button>
+<button class="btn btn-condensed btn-info">버튼</button>
+<button class="btn btn-condensed btn-info">버튼</button>
+
+Styleguide 1.7
+*/
+.btn-condensed {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }

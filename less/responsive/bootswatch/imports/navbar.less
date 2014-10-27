@@ -1,21 +1,36 @@
-@media (max-width: @screen-xs-max) {
-  .navbar {
+.navbar {
+  @media (max-width: @screen-xs-max) {
     .navbar-brand {
       border-right: none;
-      padding: 20.5px 15px;
+      font-size: 15px;
+      padding: 20.5px 22px;
       width: 190px;
 
       img {
         width: 100%;
         height: auto;
       }
+      &.gapminder-friends-brand {
+        span {
+          font-size: 20px;
+        }
+      }
     }
 
     .navbar-nav {
       margin: 0 -15px;
 
-      & > li {
-        & > a {
+      > li {
+        &.search-link {
+          margin-left: 0;
+          margin-right: 0;
+
+          &:before {
+            display: none;
+          }
+        }
+
+        > a {
           border: none;
           padding: 20px 15px;
         }
@@ -23,6 +38,11 @@
     }
 
     .glyphicon {
+      display: none;
+    }
+
+    // Hide profile-picture on small screens
+    #accountMenuLink img {
       display: none;
     }
   }
@@ -45,4 +65,27 @@
       }
     }
   }
+
+  @media (min-width: @screen-xs-max) {
+    .navbar-nav {
+      > li {
+        &.search-link {
+          a {
+            opacity: 0;
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-desktop {
+  .visible-sm;
+  .visible-md;
+  .visible-lg;
+}
+
+.navbar-mobile {
+  .visible-xs;
 }

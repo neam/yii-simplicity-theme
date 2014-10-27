@@ -1,0 +1,88 @@
+.dashboard-controller {
+  &.index-action {
+    .news-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          color: currentcolor;
+          font-weight: 400;
+        }
+
+        .news-item {
+          display: flex;
+          flex-direction: row;
+
+          .item-title {
+          }
+
+          .item-date {
+            flex-grow: 0;
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &.tasks-action {
+
+    .dashboard-profile-wrapper {
+      background: @gray-light;
+      padding: 20px 10px;
+
+      .dashboard-profile {
+        .make-row();
+      }
+
+      .name {
+        font-size: 40px;
+        margin: 0;
+      }
+
+      .profile-image  {
+        .make-md-column(2);
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .profile-facts {
+        .make-md-column(8);
+
+        .content-wrapper {
+          .make-md-column(12);
+        }
+
+        .groups {
+          .list-inline;
+          margin-top: 20px;
+          > li {
+            padding-left: 0;
+          }
+        }
+      }
+
+      .profile-actions {
+        .make-md-column(2);
+        .actions {
+          float: right;
+          a {
+            font-weight: bold;
+            padding: 0;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .dashboard-tasks-in-progress {
+      border-bottom: @grid-border-size solid @grid-border-color;
+      padding-bottom: 40px;
+    }
+  }
+}
