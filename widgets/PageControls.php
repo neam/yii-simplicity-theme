@@ -45,7 +45,7 @@ class PageControls extends CWidget
     public function run()
     {
         if ($this->visibleItemCount > 0) {
-            $this->render('application.widgets.views.PageControls.view');
+            $this->render('vendor.neam.yii-simplicity-theme.views.PageControls.view');
         }
     }
 
