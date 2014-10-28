@@ -5,6 +5,8 @@ $config['components']['themeManager']['basePath'] = $applicationDirectory . '/..
 
 $config['aliases']['yii-simplicity-theme'] = 'vendor.neam.yii-simplicity-theme';
 
+$config['import'][] = 'vendor.neam.yii-simplicity-theme.widgets.*';
+
 $config['import'][] = 'vendor.neam.yii-simplicity-theme.traits.SimplicityControllerTrait';
 
 // Meant to be overridden in app config
