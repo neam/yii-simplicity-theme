@@ -13,7 +13,7 @@
 -->
 <body>
 <div id="fileupload">
-    <form action="<?php echo $this->controller->createUrl('/p3media/import/uploadFile',$_GET )?>" method="POST" enctype="multipart/form-data">
+    <form action="<?php echo $this->controller->createUrl('/p3media/import/videoUpload',$_GET )?>" method="POST" enctype="multipart/form-data">
         <div class="fileupload-buttonbar">
             <label class="fileinput-button">
                 <span>Add files...</span>
@@ -31,7 +31,7 @@
         <div class="fileupload-progressbar"></div>
     </div>
 </div>
-	
+
 <script id="template-upload" type="text/x-jquery-tmpl">
     <tr class="template-upload{{if error}} ui-state-error{{/if}}">
         <td class="preview"><!--<a href="${url}"{{if thumbnail_url}} target="_blank"{{/if}}>${name}</a>--></td>

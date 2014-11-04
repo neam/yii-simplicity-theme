@@ -49,7 +49,6 @@ if (!isset($_GET['parent_form'])) {
 </style>
 
 <script>
-
     $(function () {
         // Signal to parent window when a new p3 media object has been created
         $('#fileupload').bind('fileuploaddone', function (event, data) {
@@ -57,11 +56,10 @@ if (!isset($_GET['parent_form'])) {
             parent.window.$('#<?php echo $_GET['parent_form']; ?>-upload-iframe').trigger('done', result);
 
             var type = result.type;
-
             /**
              * Only add to queue if it's video
              */
-            if(  type.split('/')[0] === 'video' && result.toQueue === true ){
+            if(  type.split('/')[0] === 'video' && result.toQueue ){
                 var url = '<?php echo Yii::app()->createAbsoluteUrl("/mq/addmovietoqueue") ?>',
                     queueData = {
                         movie_id : result['movie_id']
