@@ -16,7 +16,12 @@
     <?php app()->workflowUi->registerCss(); ?>
     <?php app()->workflowUi->registerScripts(); ?>
     <?php app()->yiistrap->fixPanningAndZooming(); ?>
-    <?php app()->clientScript->registerCoreScript('jquery', CClientScript::POS_END); ?>
+    <?php
+    // Use jquery 1.9.1 - required by bootstrap 3.3
+    $jquery = app()->assetManager->publish(Yii::app()->theme->basePath . '/assets/jquery-1.9.1.js');
+    app()->clientscript->scriptMap['jquery.js'] = $jquery;
+    app()->clientScript->registerCoreScript('jquery', CClientScript::POS_END);
+    ?>
     <?php /* TODO: Move this into the js-app feature branch and remove from develop ?>
     <?php js('js/lib/requirejs/require.js', CClientScript::POS_HEAD);
     <script type="text/javascript">
