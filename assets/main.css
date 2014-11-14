@@ -887,7 +887,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Open Sans', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.428571429;
   color: #353535;
