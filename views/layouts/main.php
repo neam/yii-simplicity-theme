@@ -18,8 +18,9 @@
     <?php app()->yiistrap->fixPanningAndZooming(); ?>
     <?php
     // Use jquery 1.9.1 - required by bootstrap 3.3
-    $jquery = app()->assetManager->publish(Yii::app()->theme->basePath . '/assets/jquery-1.9.1.js');
-    app()->clientscript->scriptMap['jquery.js'] = $jquery;
+    $jquery = app()->assetManager->publish(Yii::app()->theme->basePath . '/assets/jquery');
+    app()->clientscript->scriptMap['jquery.js'] = $jquery . '/jquery-1.9.1.js';
+    app()->clientscript->scriptMap['jquery.min.js'] = $jquery . '/jquery-1.9.1.min.js';
     app()->clientScript->registerCoreScript('jquery', CClientScript::POS_END);
     ?>
     <?php /* TODO: Move this into the js-app feature branch and remove from develop ?>
