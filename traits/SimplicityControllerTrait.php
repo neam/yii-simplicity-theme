@@ -4,6 +4,13 @@ trait SimplicityControllerTrait
 {
 
     /**
+     * Setting this attribute to something that !empty() evaluates as true will
+     * change the navigation-bars brand to the contents of this attribute
+     * @var mixed
+     */
+    public $homeBrandLabel = false;
+
+    /**
      * @var string the default layout for the controller view. Defaults to '//layouts/column1',
      * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
      */

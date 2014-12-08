@@ -207,7 +207,7 @@
             }
 
             .content-primary {
-              .make-md-column(5);
+              .make-md-column(0); /* Trying out 0% wide - originally 5 */
 
               .action-progress {
                 .make-row();
@@ -230,8 +230,8 @@
               }
             }
 
-            .content-secondary {
-              .make-md-column(7);
+            .content-secondary, .content-primare {
+              .make-md-column(12); /* Trying out 100% wide - originally 7 */
 
               .item-fields {
                 .make-row();
