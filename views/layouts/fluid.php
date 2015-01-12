@@ -1,7 +1,7 @@
 <?php
 /** @var string $content */
 ?>
-<?php $this->beginContent(WebApplication::LAYOUT_MAIN); ?>
+<?php $this->beginContent(WorkflowUi::LAYOUT_MAIN); ?>
     <div class="layout-fluid">
         <div class="container-fluid">
             <?php $this->renderPartial('simplicity-theme.app-views.layout-elements._menu'); ?>
