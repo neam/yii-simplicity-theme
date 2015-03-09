@@ -11213,7 +11213,7 @@ a.tasks-container .tasks .tasks-list .tasks-list-item .task .task-info .task-top
 @media (min-width: 992px) {
   .item-controller .item-progress {
     float: left;
-    width: 25%;
+    width: 100%;
   }
 }
 .item-controller .item-progress .progress-item {
